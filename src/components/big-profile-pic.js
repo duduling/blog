@@ -1,6 +1,6 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import LazyImage from 'gatsby-image';
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import LazyImage from "gatsby-image";
 
 const BigProfilePic = props => {
   return (
@@ -15,8 +15,7 @@ const BigProfilePic = props => {
             fluid={profilePic.fluid}
             alt={author}
             imgStyle={{
-              borderRadius: `50%`,
-              boxShadow: `0px 10px 30px -5px rgba(0, 0, 0, 0.3)`
+              borderRadius: `50%`
             }}
             style={{
               maxWidth: profilePic.fluid.presentationWidth,
@@ -24,6 +23,7 @@ const BigProfilePic = props => {
                 profilePic.fluid.presentationWidth /
                 profilePic.fluid.aspectRatio,
               overflow: `visible`,
+              borderRadius: "50%",
               ...props.style
             }}
           />

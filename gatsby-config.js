@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Dennis Morello`,
-    author: `Dennis Morello`,
-    email: `dennismorello@gmail.com`,
-    description: `A dev blog by Dennis Morello.`,
-    siteUrl: `https://morello.dev`,
-    siteDomain: `morello.dev`,
-    language: `en`,
-    disqusShortname: `morello-dev`,
+    title: `Dudu's doodle`,
+    author: `Dudu`,
+    email: `engus983@gmail.com`,
+    siteUrl: `https://dudu-doodle.netlify.com`,
+    siteDomain: `Dudu's doodle`,
+    description: `🐣 FE-dev 🐥`,
+    language: `ko`,
+    disqusShortname: `duv`,
     social: {
       instagram: `dennismrl`,
       linkedin: `dennismorello`,
@@ -133,7 +133,7 @@ module.exports = {
                   ),
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
+                  custom_elements: [{ "content:encoded": edge.node.html }]
                 });
               });
             },
@@ -160,8 +160,8 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml',
-            title: 'Dennis Morello'
+            output: "/rss.xml",
+            title: "Dennis Morello"
           }
         ]
       }
