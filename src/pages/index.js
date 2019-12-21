@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { Link, graphql } from 'gatsby';
-import LazyImage from 'gatsby-image';
+import React, { useContext } from "react";
+import { Link, graphql } from "gatsby";
+import LazyImage from "gatsby-image";
 import {
   Card,
   CardContent,
@@ -13,17 +13,16 @@ import {
   HeroBody,
   Title,
   Subtitle
-} from 'bloomer';
-import Typist from 'react-typist';
-import Fade from 'react-reveal/Fade';
+} from "bloomer";
+import Typist from "react-typist";
+import Fade from "react-reveal/Fade";
 
 // Components
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Animated from '../components/animated';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 // Theme
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
+import { ThemeContext, getOppositeTheme } from "../contexts/theme";
 
 const BlogIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -43,7 +42,7 @@ const BlogIndex = props => {
                 <Title>{siteDomain}</Title>
                 <Subtitle>
                   <Typist startDelay={1000}>
-                    A blog about web technologies and other stuff{' '}
+                    Dudu is doodling...{" "}
                     <span role="img" aria-label="jsx-a11y/accessible-emoji">
                       💻
                     </span>
@@ -70,43 +69,45 @@ const BlogIndex = props => {
                       }}
                       key={node.fields.slug}
                     >
-                      <Animated className="animated-card">
-                        <Link to={node.fields.slug}>
-                          <Card
-                            className={`is-post has-background-${theme}`}
-                            hasTextColor={theme}
-                          >
-                            {node.frontmatter.cover && (
-                              <CardImage>
-                                <LazyImage
-                                  fluid={
-                                    node.frontmatter.cover.childImageSharp.fluid
-                                  }
-                                  alt={title}
-                                  className="image"
+                      <div className="animated">
+                        <div className="animated-card">
+                          <Link to={node.fields.slug}>
+                            <Card
+                              className={`is-post has-background-${theme}`}
+                              hasTextColor={theme}
+                            >
+                              {node.frontmatter.cover && (
+                                <CardImage>
+                                  <LazyImage
+                                    fluid={
+                                      node.frontmatter.cover.childImageSharp
+                                        .fluid
+                                    }
+                                    alt={title}
+                                    className="image"
+                                  />
+                                </CardImage>
+                              )}
+                              <CardContent>
+                                <Title>{title}</Title>
+                                <Subtitle>
+                                  <small>
+                                    {`${node.frontmatter.date} — ${node.timeToRead} min`}
+                                  </small>
+                                </Subtitle>
+                                <Content
+                                  hasTextColor={getOppositeTheme(theme)}
+                                  dangerouslySetInnerHTML={{
+                                    __html:
+                                      node.frontmatter.description ||
+                                      node.excerpt
+                                  }}
                                 />
-                              </CardImage>
-                            )}
-                            <CardContent>
-                              <Title>{title}</Title>
-                              <Subtitle>
-                                <small>
-                                  {`${node.frontmatter.date} — ${
-                                    node.timeToRead
-                                  } min`}
-                                </small>
-                              </Subtitle>
-                              <Content
-                                hasTextColor={getOppositeTheme(theme)}
-                                dangerouslySetInnerHTML={{
-                                  __html:
-                                    node.frontmatter.description || node.excerpt
-                                }}
-                              />
-                            </CardContent>
-                          </Card>
-                        </Link>
-                      </Animated>
+                              </CardContent>
+                            </Card>
+                          </Link>
+                        </div>
+                      </div>
                     </Column>
                   );
                 })}

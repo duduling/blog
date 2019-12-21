@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { graphql } from 'gatsby';
+import React, { useContext } from "react";
+import { graphql } from "gatsby";
 import {
   Button,
   Columns,
@@ -12,17 +12,17 @@ import {
   LevelItem,
   Title,
   Subtitle
-} from 'bloomer';
-import Typist from 'react-typist';
-import Fade from 'react-reveal/Fade';
+} from "bloomer";
+import Typist from "react-typist";
+import Fade from "react-reveal/Fade";
 
 // Components
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import BigProfilePic from '../components/big-profile-pic';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import BigProfilePic from "../components/big-profile-pic";
 
 // Theme
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
+import { ThemeContext, getOppositeTheme } from "../contexts/theme";
 
 const About = props => {
   const { theme } = useContext(ThemeContext);
@@ -40,12 +40,7 @@ const About = props => {
               <React.Fragment>
                 <Title>{siteTitle}</Title>
                 <Subtitle>
-                  <Typist startDelay={1000}>
-                    A front-end engineer from Milan{' '}
-                    <span role="img" aria-label="jsx-a11y/accessible-emoji">
-                      🇮🇹
-                    </span>
-                  </Typist>
+                  <Typist startDelay={1000}>Front-end developer입니다. </Typist>
                 </Subtitle>
               </React.Fragment>
             </Fade>
@@ -65,48 +60,16 @@ const About = props => {
                       </span>
                     </Title>
                     <Content>
-                      <p>
-                        I am a front-end engineer based in Milan. I love writing
-                        code, learning new things and exploring the world around
-                        me.
-                      </p>
-                      <p>
-                        This website has been designed and written by me using{' '}
-                        <a
-                          href="https://reactjs.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="React"
-                        >
-                          React
-                        </a>{' '}
-                        as the UI library,{' '}
-                        <a
-                          href="https://gatsbyjs.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Gatsby"
-                        >
-                          Gatsby
-                        </a>{' '}
-                        as the static site generator and{' '}
-                        <a
-                          href="https://bulma.io"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Bulma"
-                        >
-                          Bulma
-                        </a>{' '}
-                        as the CSS library.
-                      </p>
-                      <hr />
-                      <p>
-                        Have a look at my resume (<i>coming soon</i>) or contact
-                        me!
-                      </p>
+                      <div>
+                        Front-end developer입니다. 👨🏻‍💻<br/>
+                        스타플레이어보다는 팀플레이를 더 선호합니다. 👨‍👨‍👦‍👦 <br/>
+                        최신 기술도 좋아하지만 🎁<br/>
+                        상황에 맞는 도구가 있다고 생각합니다. 🧐<br/>
+                        내가 직접 사용하는 서비스를 만들기를 원합니다. 🚴🏻‍♂️<br/>
+                        타고나지 않기에 항상 노력하려 합니다. 🔥
+                      </div>
                     </Content>
-                    <Level isMobile>
+                    {/* <Level isMobile>
                       <LevelItem>
                         <Button disabled>Resume</Button>
                       </LevelItem>
@@ -132,7 +95,7 @@ const About = props => {
                           E-mail
                         </Button>
                       </LevelItem>
-                    </Level>
+                    </Level> */}
                   </React.Fragment>
                 </Fade>
               </Column>
@@ -140,11 +103,11 @@ const About = props => {
                 <Fade right>
                   <BigProfilePic
                     className="is-hidden-mobile"
-                    style={{ margin: 'auto 0 auto auto' }}
+                    style={{ margin: "auto 0 auto auto" }}
                   />
                   <BigProfilePic
                     className="is-hidden-tablet"
-                    style={{ margin: '2rem auto 0 auto' }}
+                    style={{ margin: "2rem auto 0 auto" }}
                   />
                 </Fade>
               </Column>

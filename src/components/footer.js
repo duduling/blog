@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import LazyImage from 'gatsby-image';
+import React, { useContext } from "react";
+import { Link, StaticQuery, graphql } from "gatsby";
+import LazyImage from "gatsby-image";
 import {
   Button,
   Columns,
@@ -15,10 +15,10 @@ import {
   Media,
   MediaContent,
   MediaLeft
-} from 'bloomer';
+} from "bloomer";
 
 // Theme
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
+import { ThemeContext, getOppositeTheme } from "../contexts/theme";
 
 const Footer = props => {
   const { theme } = useContext(ThemeContext);
@@ -32,11 +32,12 @@ const Footer = props => {
             <Level className="has-text-centered-mobile">
               <LevelLeft>
                 <LevelItem>
-                  <Media style={{ alignItems: 'center' }}>
+                  <Media style={{ alignItems: "center" }}>
                     <MediaLeft style={{ height: 64 }}>
                       <LazyImage
                         fixed={data.avatar.childImageSharp.fixed}
                         alt={data.site.siteMetadata.author}
+                        style={{ borderRadius: "50%" }}
                       />
                     </MediaLeft>
                     <MediaContent>
@@ -56,16 +57,14 @@ const Footer = props => {
                   </Media>
                 </LevelItem>
               </LevelLeft>
-              <LevelRight className="is-inline-flex-mobile">
+              {/* <LevelRight className="is-inline-flex-mobile">
                 <LevelItem>
                   <Columns isMobile>
                     <Column>
                       <Button
-                        isInverted={theme === 'light'}
+                        isInverted={theme === "light"}
                         isColor="info"
-                        href={`https://twitter.com/${
-                          data.site.siteMetadata.social.twitter
-                        }`}
+                        href={`https://twitter.com/${data.site.siteMetadata.social.twitter}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Twitter"
@@ -75,11 +74,9 @@ const Footer = props => {
                     </Column>
                     <Column>
                       <Button
-                        isInverted={theme === 'light'}
+                        isInverted={theme === "light"}
                         isColor="danger"
-                        href={`https://instagram.com/${
-                          data.site.siteMetadata.social.instagram
-                        }`}
+                        href={`https://instagram.com/${data.site.siteMetadata.social.instagram}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Instagram"
@@ -92,11 +89,9 @@ const Footer = props => {
                     </Column>
                     <Column>
                       <Button
-                        isInverted={theme === 'light'}
+                        isInverted={theme === "light"}
                         isColor="info"
-                        href={`https://linkedin.com/in/${
-                          data.site.siteMetadata.social.linkedin
-                        }`}
+                        href={`https://linkedin.com/in/${data.site.siteMetadata.social.linkedin}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         title="LinkedIn"
@@ -106,7 +101,7 @@ const Footer = props => {
                     </Column>
                     <Column>
                       <Button
-                        isInverted={theme === 'light'}
+                        isInverted={theme === "light"}
                         isColor="primary"
                         type="application/rss+xml"
                         href="/rss.xml"
@@ -119,19 +114,7 @@ const Footer = props => {
                     </Column>
                   </Columns>
                 </LevelItem>
-              </LevelRight>
-            </Level>
-            <Level>
-              <LevelItem hasTextAlign="centered">
-                <Button
-                  href="https://ko-fi.com/O4O2RDTK"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  isColor="warning"
-                >
-                  Buy Me a Coffee
-                </Button>
-              </LevelItem>
+              </LevelRight> */}
             </Level>
           </Container>
         </BloomerFooter>

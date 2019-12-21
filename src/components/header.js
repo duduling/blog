@@ -1,5 +1,7 @@
-import React, { useState, useContext } from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import React, { useState, useContext } from "react";
+import { Link, StaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+
 import {
   Button,
   Icon,
@@ -10,12 +12,20 @@ import {
   NavbarItem,
   NavbarMenu,
   NavbarStart
-} from 'bloomer';
+} from "bloomer";
 
-import codeLogo from '../../content/assets/logo-64.png';
+import codeLogo from "../../content/assets/logo-64.png";
 
 // Theme
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
+import { ThemeContext, getOppositeTheme } from "../contexts/theme";
+
+// #region - Styled Components
+const SwitchThemeBtn = styled(Button)`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+`;
+// #endregion
 
 const Header = props => {
   const [isActive, setIsActive] = useState(false);
@@ -33,7 +43,7 @@ const Header = props => {
           <NavbarBrand>
             <Link to={`/`} className="navbar-item">
               <img src={codeLogo} alt={data.site.siteMetadata.title} />
-              <b style={{ marginLeft: '0.5rem' }}>
+              <b style={{ marginLeft: "0.5rem" }}>
                 {data.site.siteMetadata.siteDomain}
               </b>
             </Link>
@@ -53,16 +63,16 @@ const Header = props => {
                 About
               </Link>
               <NavbarItem>
-                <Button
+                <SwitchThemeBtn
                   isColor={theme}
                   onClick={toggleTheme}
                   title="Toggle Dark Theme"
                 >
                   <Icon
                     className="fas fa-moon"
-                    hasTextColor={theme === 'light' ? 'dark' : 'warning'}
+                    hasTextColor={theme === "light" ? "dark" : "warning"}
                   />
-                </Button>
+                </SwitchThemeBtn>
               </NavbarItem>
             </NavbarEnd>
           </NavbarMenu>
