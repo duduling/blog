@@ -1,34 +1,44 @@
-import React, { useContext } from 'react';
-import { Link, graphql } from 'gatsby';
-import LazyImage from 'gatsby-image';
-import { Container, Content, Section, Subtitle, Title } from 'bloomer';
-import { DiscussionEmbed } from 'disqus-react';
+import React, { useContext } from 'react'
+import { Link, graphql } from 'gatsby'
+import LazyImage from 'gatsby-image'
+import { Container, Content, Section, Subtitle, Title } from 'bloomer'
+import { DiscussionEmbed } from 'disqus-react'
+
+import styled from 'styled-components'
 
 // Components
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import ReadingProgress from '../components/reading-progress';
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import ReadingProgress from '../components/reading-progress'
 
 // Theme
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
+import { ThemeContext, getOppositeTheme } from '../contexts/theme'
+
+// #region - Styled Components
+const CustomContainer = styled(Container)`
+@media screen and (min-width: 1024px) {
+  max-width: 960px;
+}
+`
+// #endregion
 
 const BlogPostTemplate = props => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
 
-  const post = props.data.markdownRemark;
-  const cover = post.frontmatter.cover;
+  const post = props.data.markdownRemark
+  const cover = post.frontmatter.cover
   const {
     title: siteTitle,
     author,
     siteUrl,
     keywords,
     disqusShortname
-  } = props.data.site.siteMetadata;
-  const postUrl = `${siteUrl}${post.fields.slug}`;
-  const { previous, next } = props.pageContext;
+  } = props.data.site.siteMetadata
+  const postUrl = `${siteUrl}${post.fields.slug}`
+  const { previous, next } = props.pageContext
   const siteKeywords = Array.from(
     new Set([...(keywords || []), ...(post.frontmatter.tags || [])])
-  );
+  )
   const articleMeta = [
     {
       name: 'article:published_time',
@@ -54,7 +64,7 @@ const BlogPostTemplate = props => {
       name: 'article:tag',
       content: k
     }))
-  ];
+  ]
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -68,14 +78,14 @@ const BlogPostTemplate = props => {
       />
       <ReadingProgress color={theme === 'light' ? 'dark' : 'warning'} />
       <Section className={`has-background-${theme}`}>
-        <Container>
+        <CustomContainer>
           <Title hasTextColor={getOppositeTheme(theme)}>
             {post.frontmatter.title}
           </Title>
           <Subtitle hasTextColor={getOppositeTheme(theme)}>
             <small>{`${post.frontmatter.date} — ${post.timeToRead} min`}</small>
           </Subtitle>
-        </Container>
+        </CustomContainer>
         {cover && (
           <div style={{ margin: `2rem -1.5rem` }}>
             <LazyImage
@@ -92,7 +102,7 @@ const BlogPostTemplate = props => {
             />
           </div>
         )}
-        <Container>
+        <CustomContainer>
           <Content
             hasTextColor={getOppositeTheme(theme)}
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -135,13 +145,13 @@ const BlogPostTemplate = props => {
               title: post.frontmatter.title
             }}
           />
-        </Container>
+        </CustomContainer>
       </Section>
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPostTemplate;
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -170,7 +180,7 @@ export const pageQuery = graphql`
         tags
         cover {
           childImageSharp {
-            fluid(maxWidth: 1400, maxHeight: 600, quality: 80) {
+            fluid(maxWidth: 1024, maxHeight: 600, quality: 80) {
               ...GatsbyImageSharpFluid_withWebp
               presentationWidth
               originalImg
@@ -180,4 +190,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
