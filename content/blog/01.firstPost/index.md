@@ -1,6 +1,6 @@
 ---
-title: 블로그 어디서 시작하지? 🤔
-date: "2019-12-21"
+title: 블로그를 시작해보자! 🤔
+date: "2019-12-28"
 description: 블로그 시작하려는 병아리🐣 개발자의 유랑기
 tags: ["Etc"]
 cover: "./cover.jpg"
@@ -15,6 +15,6 @@ draft: false
 
 ## 나의 목표 🔥
 
-![](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
-
 나의 블로에는 깔끔한 정리 예리한 분석 등은 없지만 그저 나의 목표는 엄청난 블로그가 되기 보다는 혹시 내가 아는 것을 모르는 분을 위해..(한명쯤은 있겠져...? 😂) 내가 지속적으로 공부하고 짧게라도 그것을 남길수 있으면 좋겠다. **주기적으로 블로그를 꼭 작성할 수 있기를...! 👨🏻‍💻**
+
+![](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
