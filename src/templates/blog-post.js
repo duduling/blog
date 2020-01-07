@@ -11,6 +11,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ReadingProgress from '../components/reading-progress'
 
+import { Disqus } from "gatsby-plugin-disqus"
+
 // Theme
 import { ThemeContext, getOppositeTheme } from '../contexts/theme'
 
@@ -39,6 +41,16 @@ const BlogPostTemplate = props => {
   const siteKeywords = Array.from(
     new Set([...(keywords || []), ...(post.frontmatter.tags || [])])
   )
+
+  // #region - 댓글
+  const { frontmatter, id } = props.data.markdownRemark
+  const disqusConfig = {
+    url: `${siteUrl + frontmatter.path}`,
+    identifier: id,
+    title: post.frontmatter.title,
+  }
+  // #endregion
+
   const articleMeta = [
     {
       name: 'article:published_time',
@@ -67,87 +79,90 @@ const BlogPostTemplate = props => {
   ]
 
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        type="article"
-        url={postUrl}
-        meta={articleMeta}
-        keywords={siteKeywords}
-      />
-      <ReadingProgress color={theme === 'light' ? 'dark' : 'warning'} />
-      <Section className={`has-background-${theme}`}>
-        <CustomContainer>
-          <Title hasTextColor={getOppositeTheme(theme)}>
-            {post.frontmatter.title}
-          </Title>
-          <Subtitle hasTextColor={getOppositeTheme(theme)}>
-            <small>{`${post.frontmatter.date} — ${post.timeToRead} min`}</small>
-          </Subtitle>
-        </CustomContainer>
-        {cover && (
-          <div style={{ margin: `2rem -1.5rem` }}>
-            <LazyImage
-              fluid={cover.childImageSharp.fluid}
-              alt={post.frontmatter.title}
+    <>
+      <Layout location={props.location} title={siteTitle}>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+          type='article'
+          url={postUrl}
+          meta={articleMeta}
+          keywords={siteKeywords}
+        />
+        <ReadingProgress color={theme === 'light' ? 'dark' : 'warning'} />
+        <Section className={`has-background-${theme}`}>
+          <CustomContainer>
+            <Title hasTextColor={getOppositeTheme(theme)}>
+              {post.frontmatter.title}
+            </Title>
+            <Subtitle hasTextColor={getOppositeTheme(theme)}>
+              <small>{`${post.frontmatter.date} — ${post.timeToRead} min`}</small>
+            </Subtitle>
+          </CustomContainer>
+          {cover && (
+            <div style={{ margin: `2rem -1.5rem` }}>
+              <LazyImage
+                fluid={cover.childImageSharp.fluid}
+                alt={post.frontmatter.title}
+                style={{
+                  maxWidth: cover.childImageSharp.fluid.presentationWidth,
+                  maxHeight:
+                    cover.childImageSharp.fluid.presentationWidth /
+                    cover.childImageSharp.fluid.aspectRatio,
+                  margin: `0 auto`,
+                  boxShadow: `0px 10px 30px -5px rgba(0, 0, 0, 0.3)`
+                }}
+              />
+            </div>
+          )}
+          <CustomContainer>
+            <Content
+              hasTextColor={getOppositeTheme(theme)}
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+
+            <hr />
+
+            <ul
               style={{
-                maxWidth: cover.childImageSharp.fluid.presentationWidth,
-                maxHeight:
-                  cover.childImageSharp.fluid.presentationWidth /
-                  cover.childImageSharp.fluid.aspectRatio,
-                margin: `0 auto`,
-                boxShadow: `0px 10px 30px -5px rgba(0, 0, 0, 0.3)`
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                </Link>
+                )}
+              </li>
+            </ul>
+
+            <hr />
+
+            <DiscussionEmbed
+              shortname={disqusShortname}
+              config={{
+                url: postUrl,
+                identifier: post.id,
+                title: post.frontmatter.title
               }}
             />
-          </div>
-        )}
-        <CustomContainer>
-          <Content
-            hasTextColor={getOppositeTheme(theme)}
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-
-          <hr />
-
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-
-          <hr />
-
-          <DiscussionEmbed
-            shortname={disqusShortname}
-            config={{
-              url: postUrl,
-              identifier: post.id,
-              title: post.frontmatter.title
-            }}
-          />
-        </CustomContainer>
-      </Section>
-    </Layout>
+          </CustomContainer>
+        </Section>
+      </Layout>
+      <Disqus config={disqusConfig} />
+    </>
   )
 }
 
