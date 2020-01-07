@@ -7,7 +7,7 @@ module.exports = {
     siteDomain: `Dudu's doodle`,
     description: `🐣 FE-dev 🐥`,
     language: `ko`,
-    disqusShortname: `duv`,
+    disqusShortname: `dudu-doodle`,
     social: {
       instagram: `dennismrl`,
       linkedin: `dennismorello`,
@@ -31,6 +31,12 @@ module.exports = {
   },
   pathPrefix: `/`,
   plugins: [
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `kyoungah`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
