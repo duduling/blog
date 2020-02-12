@@ -1,7 +1,7 @@
-import { Link, graphql, StaticQuery } from 'gatsby';
-import Picture from 'gatsby-image';
-import React from 'react';
-import theme from "../../theme/theme.yaml";
+import { Link, graphql, StaticQuery } from 'gatsby'
+import Picture from 'gatsby-image'
+import React from 'react'
+import theme from "../../theme/theme.yaml"
 
 const ReImg = (props) => {
     const fluid = (props.fluid ? props.fluid : JSON.parse(props.rehyped)) // To support 2 different use cases
@@ -27,28 +27,24 @@ const ReImg = (props) => {
     }
 
     if (!props.hovereffect) {
-        return <a href={href} target="_blank">
-                    <Picture
-                        fluid={fluid}
-                        title={props.title}
-                        style={relativeStyle}
-                    />
-                </a>
+        return <a href={href} target={"_blank"}>
+            <Picture
+                fluid={fluid}
+                title={props.title}
+                style={relativeStyle}
+            />
+        </a>
     }
 
     return (
-        <a href={href} target="_blank">
+        <a href={href} target={"_blank"}>
             <div className="imgContainer">
-                <img
-                    src={fluid.tracedSVG}
-                    title={props.title}
-                    style={relativeStyle} />
+                <img src={fluid.tracedSVG} title={props.title} style={relativeStyle} alt={''} />
                 <Picture
                     fluid={fluid}
                     title={props.title}
                     style={absoluteStyle}
                 />
-        
             </div>
             <style jsx>{`
             .imgContainer {
@@ -66,7 +62,7 @@ const ReImg = (props) => {
             }
             `}</style>
         </a>
-    );
-};
+    )
+}
 
-export default ReImg;
+export default ReImg

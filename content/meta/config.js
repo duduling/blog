@@ -1,31 +1,31 @@
 module.exports = {
-  siteTitle: "Atte Juvonen", // <title>
-  shortSiteTitle: "Atte Juvonen", // <title> ending for posts and pages
-  siteDescription: "Atte Juvonen",
-  siteUrl: "https://www.attejuvonen.fi",
+  siteTitle: "Dudu", // <title>
+  shortSiteTitle: "Duduling", // <title> ending for posts and pages
+  siteDescription: "Dudu's doodle",
+  siteUrl: "https://dudu-doodle.netlify.com/",
   // pathPrefix: "",
-  siteImage: "preview.jpg",
-  siteLanguage: "en",
+  siteImage: "my-frofile.jpg",
+  siteLanguage: "ko",
 
   /* author */
-  authorName: "Atte Juvonen",
+  authorName: "Duduling",
   authorTwitterAccount: "",
-  authorGithub: "https://github.com/baobabkoodaa",
-  authorStackoverflow: "https://stackexchange.com/users/5678032/atte-juvonen?tab=accounts",
-  authorLinkedin: "https://linkedin.com/in/atte-juvonen-86b886113",
-  authorCodeforces: "https://codeforces.com/profile/baobab",
-  authorYoutube: "https://www.youtube.com/channel/UCfHqfHoSYL0V_fXA_JQkeLw?view_as=subscriber",
+  authorGithub: "https://github.com/duduling",
+  authorStackoverflow: "#",
+  authorLinkedin: "https://www.linkedin.com/in/duhyeon-kim-9947b9190/",
+  authorCodeforces: "#",
+  authorYoutube: "#",
 
   /* header text */
-  headerTitle: "atte juvonen",
+  headerTitle: "Dudu's doodling",
   headerSubTitle: "",
 
   /* manifest.json */
-  manifestName: "Atte Juvonen",
-  manifestShortName: "atteJuvonen", // max 12 characters
+  manifestName: "Dudu's dudooling",
+  manifestShortName: "Duduling", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
-  manifestThemeColor: "#666",
+  manifestThemeColor: "#FFDB1A",
   manifestDisplay: "standalone",
 
   // gravatar
@@ -33,5 +33,5 @@ module.exports = {
   // Replace your email adress with md5-code.
   // Example https://www.gravatar.com/avatar/g.strainovic@gmail.com ->
   // gravatarImgMd5: "https://www.gravatar.com/avatar/1db853e4df386e8f699e4b35505dd8c6",
-  gravatarImgMd5: "",
-};
+  gravatarImgMd5: "my-frofile.png",
+}

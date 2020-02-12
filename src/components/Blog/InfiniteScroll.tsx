@@ -48,7 +48,10 @@ export interface InfiniteScrollProps {
 }
 
 export class InfiniteScroll extends React.Component<InfiniteScrollProps, {}> {
-  public static defaultProps: Pick<InfiniteScrollProps, 'threshold' | 'throttle'> = {
+  public static defaultProps: Pick<
+    InfiniteScrollProps,
+    'threshold' | 'throttle'
+  > = {
     threshold: 100,
     throttle: 64,
   };
@@ -82,29 +85,25 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, {}> {
     if (
       this.props.hasMore &&
       this.sentinel.getBoundingClientRect().top - window.innerHeight <
-      this.props.threshold!
+        this.props.threshold!
     ) {
       this.props.onLoadMore();
     }
-  }
+  };
 
   render() {
-    const sentinel = <div ref={i => this.sentinel = i} />;
+    const sentinel = <div ref={i => (this.sentinel = i)} />;
 
-    if(this.props.render) {
+    if (this.props.render) {
       return this.props.render({
         sentinel,
-        children: this.props.children
+        children: this.props.children,
       });
     }
 
-    if(this.props.component) {
+    if (this.props.component) {
       const Container = this.props.component;
-      return (
-        <Container sentinel={sentinel}>
-          {this.props.children}
-        </Container>
-      );
+      return <Container sentinel={sentinel}>{this.props.children}</Container>;
     }
 
     return (

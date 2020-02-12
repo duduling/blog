@@ -1,11 +1,11 @@
-import { FaArrowRight } from "react-icons/fa/";
-import { FaCalendar } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
-import { FaUser } from "react-icons/fa/";
-import Picture from "gatsby-image";
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { FaArrowRight } from "react-icons/fa/"
+import { FaCalendar } from "react-icons/fa/"
+import { FaTag } from "react-icons/fa/"
+import { FaUser } from "react-icons/fa/"
+import Picture from "gatsby-image"
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
 
 const Teaser = props => {
   const {
@@ -23,14 +23,14 @@ const Teaser = props => {
       }
     },
     index
-  } = props;
+  } = props
 
   return (
     <React.Fragment>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <Picture fluid={fluid} critical={index==0}/>
+            <Picture fluid={fluid} />
           </div>
           <h1>
             {title} <FaArrowRight className="arrow" />
@@ -44,7 +44,7 @@ const Teaser = props => {
             </span> */}
             {tags && tags.map(tag =>
               <span key={tag}>
-              <FaTag size={18} /> {tag}
+                <FaTag size={18} /> {tag}
               </span>
             )}
           </p>
@@ -243,12 +243,12 @@ const Teaser = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Teaser.propTypes = {
   post: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
-};
+}
 
-export default Teaser;
+export default Teaser

@@ -1,13 +1,13 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
-import VisibilitySensor from "react-visibility-sensor";
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
+import VisibilitySensor from "react-visibility-sensor"
 
-import { ScreenWidthContext } from "../../layouts";
-import config from "../../../content/meta/config";
-import Menu from "../Menu";
+import { ScreenWidthContext } from "../../layouts"
+import config from "../../../content/meta/config"
+import Menu from "../Menu"
 
-import avatar from "../../images/jpg/avatar.jpg";
+import avatar from "../../images/jpg/avatar.jpg"
 
 class Header extends React.Component {
   state = {
@@ -16,44 +16,44 @@ class Header extends React.Component {
 
   visibilitySensorChange = val => {
     if (val) {
-      this.setState({ fixed: false });
+      this.setState({ fixed: false })
     } else {
-      this.setState({ fixed: true });
+      this.setState({ fixed: true })
     }
   };
 
   getHeaderSize = () => {
-    const fixed = this.state.fixed ? "fixed" : "";
-    const homepage = this.props.path === "/" ? "homepage" : "";
-    return "fixed"; // `${fixed} ${homepage}` (Change me if you want a more "lively" navbar)
+    const fixed = this.state.fixed ? "fixed" : ""
+    const homepage = this.props.path === "/" ? "homepage" : ""
+    return "fixed" // `${fixed} ${homepage}` (Change me if you want a more "lively" navbar)
   };
 
   render() {
-    const { path, theme } = this.props;
-    const { fixed } = this.state;
+    const { path, theme } = this.props
+    const { fixed } = this.state
 
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
-          <Link to="/about" className="logoType">
+          <Link to="/" className="logoType">
             <div className="logo">
-              <img src={config.gravatarImgMd5=="" ? avatar : config.gravatarImgMd5 } alt={config.siteTitle} />
+              <img src={config.gravatarImgMd5 === "" ? avatar : config.gravatarImgMd5} alt={config.siteTitle} />
             </div>
             <div className="type">
               <h1>{config.headerTitle}</h1>
               <h2>{config.headerSubTitle}</h2>
             </div>
           </Link>
-            <ScreenWidthContext.Consumer>
-              {width => (
-                <Menu
-                  path={path}
-                  fixed={fixed}
-                  screenWidth={width}
-                  theme={theme}
-                />
-              )}
-            </ScreenWidthContext.Consumer>
+          <ScreenWidthContext.Consumer>
+            {width => (
+              <Menu
+                path={path}
+                fixed={fixed}
+                screenWidth={width}
+                theme={theme}
+              />
+            )}
+          </ScreenWidthContext.Consumer>
         </header>
         <VisibilitySensor onChange={this.visibilitySensorChange}>
           <div className="sensor" />
@@ -242,13 +242,13 @@ class Header extends React.Component {
           }
         `}</style>
       </React.Fragment>
-    );
+    )
   }
 }
 
 Header.propTypes = {
   path: PropTypes.string.isRequired,
   theme: PropTypes.object.isRequired
-};
+}
 
-export default Header;
+export default Header

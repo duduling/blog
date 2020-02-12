@@ -1,27 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
-require("core-js/fn/array/from");
+import React from "react"
+import PropTypes from "prop-types"
+require("core-js/fn/array/from")
 
-import { FaHome, FaSearch, FaEnvelope, FaTag, FaUser, FaRss } from "react-icons/fa/";
+import { FaHome, FaSearch, FaEnvelope, FaTag, FaUser, FaRss } from "react-icons/fa/"
 
-import Item from "./Item";
-import Expand from "./Expand";
+import Item from "./Item"
+import Expand from "./Expand"
 
 class Menu extends React.Component {
   constructor(props) {
-    super(props);
-    this.itemList = React.createRef();
+    super(props)
+    this.itemList = React.createRef()
 
     this.items = [
       { to: "/", label: "Home", icon: FaHome },
       { to: "/tags/", label: "Tags", icon: FaTag },
       //{ to: "/search/", label: "Search", icon: FaSearch },
-      { to: "/follow/", label: "Follow", icon: FaRss },
-      { to: "/contact/", label: "Contact", icon: FaEnvelope },
+      // { to: "/follow/", label: "Follow", icon: FaRss },
+      // { to: "/contact/", label: "Contact", icon: FaEnvelope },
       { to: "/about/", label: "About", icon: FaUser }
-    ];
+    ]
 
-    this.renderedItems = []; // will contain references to rendered DOM elements of menu
+    this.renderedItems = [] // will contain references to rendered DOM elements of menu
   }
 
   state = {
@@ -37,7 +37,7 @@ class Menu extends React.Component {
   };
 
   componentDidMount() {
-    this.renderedItems = this.getRenderedItems();
+    this.renderedItems = this.getRenderedItems()
   }
 
   componentDidUpdate(prevProps) {
@@ -47,88 +47,88 @@ class Menu extends React.Component {
       this.props.screenWidth !== prevProps.screenWidth
     ) {
       if (this.props.path !== prevProps.path) {
-        this.closeMenu();
+        this.closeMenu()
       }
-      this.hideOverflowedMenuItems();
+      this.hideOverflowedMenuItems()
     }
   }
 
   getRenderedItems = () => {
-    const itemList = this.itemList.current;
-    return Array.from(itemList.children);
+    const itemList = this.itemList.current
+    return Array.from(itemList.children)
   };
 
   hideOverflowedMenuItems = () => {
-    const PADDING_AND_SPACE_FOR_MORELINK = this.props.screenWidth >= 1024 ? 60 : 0;
+    const PADDING_AND_SPACE_FOR_MORELINK = this.props.screenWidth >= 1024 ? 60 : 0
 
-    const itemsContainer = this.itemList.current;
-    const maxWidth = itemsContainer.offsetWidth - PADDING_AND_SPACE_FOR_MORELINK;
+    const itemsContainer = this.itemList.current
+    const maxWidth = itemsContainer.offsetWidth - PADDING_AND_SPACE_FOR_MORELINK
 
-    this.setState({ hiddenItems: [] }); // clears previous state
+    this.setState({ hiddenItems: [] }) // clears previous state
 
     const menu = this.renderedItems.reduce(
       (result, item) => {
-        item.classList.add("item");
-        item.classList.remove("hideItem");
+        item.classList.add("item")
+        item.classList.remove("hideItem")
 
-        const currentCumulativeWidth = result.cumulativeWidth + item.offsetWidth;
-        result.cumulativeWidth = currentCumulativeWidth;
+        const currentCumulativeWidth = result.cumulativeWidth + item.offsetWidth
+        result.cumulativeWidth = currentCumulativeWidth
 
         if (!item.classList.contains("more") && currentCumulativeWidth > maxWidth) {
-          const link = item.querySelector("a");
+          const link = item.querySelector("a")
 
-          item.classList.add("hideItem");
-          item.classList.remove("item");
+          item.classList.add("hideItem")
+          item.classList.remove("item")
           result.hiddenItems.push({
             to: link.getAttribute("data-slug"),
             label: link.text
-          });
+          })
         }
-        return result;
+        return result
       },
       { visibleItems: [], cumulativeWidth: 0, hiddenItems: [] }
-    );
+    )
 
-    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }));
+    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }))
   };
 
   toggleMenu = e => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (this.props.screenWidth < 1024) {
       this.renderedItems.map(item => {
-        const oldClass = this.state.open ? "showItem" : "hideItem";
-        const newClass = this.state.open ? "hideItem" : "showItem";
+        const oldClass = this.state.open ? "showItem" : "hideItem"
+        const newClass = this.state.open ? "hideItem" : "showItem"
 
         if (item.classList.contains(oldClass)) {
-          item.classList.add(newClass);
-          item.classList.remove(oldClass);
+          item.classList.add(newClass)
+          item.classList.remove(oldClass)
         }
-      });
+      })
     }
 
-    this.setState(prevState => ({ open: !prevState.open }));
+    this.setState(prevState => ({ open: !prevState.open }))
   };
 
   closeMenu = e => {
     //e.preventDefault();
 
     if (this.state.open) {
-      this.setState({ open: false });
+      this.setState({ open: false })
       if (this.props.screenWidth < 1024) {
         this.renderedItems.map(item => {
           if (item.classList.contains("showItem")) {
-            item.classList.add("hideItem");
-            item.classList.remove("item");
+            item.classList.add("hideItem")
+            item.classList.remove("item")
           }
-        });
+        })
       }
     }
   };
 
   render() {
-    const { screenWidth, theme } = this.props;
-    const { open } = this.state;
+    const { screenWidth, theme } = this.props
+    const { open } = this.state
 
     return (
       <React.Fragment>
@@ -266,8 +266,8 @@ class Menu extends React.Component {
           }
         `}</style>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Menu;
+export default Menu
