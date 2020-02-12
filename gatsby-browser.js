@@ -1,38 +1,17 @@
-import React from 'react';
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/browser-apis/
+ */
 
-// Hooks
-import { useLocalStorage } from './src/hooks/local-storage';
+import React from "react"
 
-// Font Awesome
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
-// Global Style
-import './src/styles/index.scss';
-
-// Typist CSS
-import 'react-typist/dist/Typist.css';
-
-// Prism.js Theme
-import 'prismjs/themes/prism-okaidia.css';
-
-// Contexts
-import { ThemeContext } from './src/contexts/theme';
-
-const App = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
-
-  return (
-    <ThemeContext.Provider
-      value={{
-        theme,
-        setTheme
-      }}
-    >
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+import { GlobalState } from "./src/components/GlobalState/GlobalState.js"
 
 export const wrapRootElement = ({ element }) => {
-  return <App>{element}</App>;
-};
+    return (
+        <GlobalState>
+            {element}
+        </GlobalState>
+    )
+}

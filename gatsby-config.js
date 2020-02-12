@@ -1,55 +1,109 @@
+require("dotenv").config();
+const config = require("./content/meta/config");
+const transformer = require("./src/utils/algolia");
+
+const query = `{
+  allMarkdownRemark( filter: { fields: { slug: { ne: null } } }) {
+    edges {
+      node {
+        objectID: fileAbsolutePath
+        fields {
+          slug
+        }
+        internal {
+          content
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}`;
+
+const queries = [
+  {
+    query,
+    transformer: ({ data }) => {
+      return data.allMarkdownRemark.edges.reduce(transformer, []);
+    }
+  }
+];
+
 module.exports = {
-  siteMetadata: {
-    title: `Dudu's doodle`,
-    author: `Dudu`,
-    email: `engus983@gmail.com`,
-    siteUrl: `https://dudu-doodle.netlify.com`,
-    siteDomain: `Dudu's doodle`,
-    description: `🐣 FE-dev 🐥`,
-    language: `ko`,
-    disqusShortname: `dudu-doodle`,
-    social: {
-      instagram: `dennismrl`,
-      linkedin: `dennismorello`,
-      twitter: `dennismorello`,
-      github: `dennismorello`
-    },
-    keywords: [
-      `dennis`,
-      `morello`,
-      `blog`,
-      `gatsby`,
-      `javascript`,
-      `js`,
-      `react`,
-      `reactjs`,
-      `html`,
-      `html5`,
-      `css`,
-      `css3`
-    ]
-  },
-  pathPrefix: `/`,
-  plugins: [
+  // pathPrefix: config.pathPrefix,
+
+  // If you want a Search page, put this back in plugins:
+  /*
     {
-      resolve: `gatsby-plugin-disqus`,
+      resolve: `gatsby-plugin-algolia`,
       options: {
-        shortname: `kyoungah`,
+        appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
+        apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : "",
+        indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "",
+        queries,
+        chunkSize: 10000 // default: 1000
+      }
+    },
+  */
+
+  siteMetadata: {
+    title: config.siteTitle,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
+    contactPostAddress: process.env.CONTACT_POST_ADDRESS || "",
+    emailSubLink: process.env.EMAIL_SUB_LINK || "",
+    algolia: {
+      appId: process.env.ALGOLIA_APP_ID || "",
+      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+        : "",
+      indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
+    }
+  },
+  plugins: [
+    `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
+    `gatsby-plugin-styled-jsx-postcss`, // as above
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        //jsxPragma: `jsx`, // defaults to "React" ??
+        allExtensions: true
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-layout`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-        ignore: [`**/\.*`] // ignore files starting with a dot
+        component: require.resolve(`./src/layouts/`)
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`
+        name: `images`,
+        path: `${__dirname}/src/images/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/${process.env.POSTS_FOLDER || 'mock_posts'}/`,
+        name: "posts"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages/`,
+        name: "pages"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `parts`,
+        path: `${__dirname}/content/parts/`
       }
     },
     {
@@ -57,52 +111,118 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-component-parent2div",
+            options: { components: ["re-icons", "re-img", "re-tracedsvg-gallery"] }
+          },
+          `gatsby-plugin-sharp`,
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1400,
-              linkImagesToOriginal: false,
-              withWebp: {
-                quality: 80
-              },
-              wrapperStyle: fluidResult =>
-                `flex:${Math.round(fluidResult.aspectRatio, 2)};`
+              maxWidth: 800,
+              backgroundColor: "transparent",
+              tracedSVG: { color: '#f9ebd2' }
             }
           },
-          `gatsby-remark-embed-video`,
+          {
+            resolve: `gatsby-remark-rehype-images`,
+            options: {
+              tag: 're-img',
+              maxWidth: 800,
+              quality: 90,
+              webP: true,
+              toFormat: 'WEBP',
+              tracedSVG: { color: '#f9ebd2' },
+              generateTracedSVG: true
+            }
+          },
+
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
+              wrapperStyle: `margin-bottom: 2em`
             }
           },
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-external-links`,
+          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-a11y-emoji`,
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: "gatsby-remark-emojis",
             options: {
-              showLineNumbers: true,
-              noInlineHighlight: true
-            }
-          },
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              strict: `ignore`
+              // Deactivate the plugin globally (default: true)
+              active: true,
+              // Add a custom css class
+              class: "emoji-icon",
+              // Select the size (available size: 16, 24, 32, 64)
+              size: 64,
+              // Add custom styles
+              styles: {
+                display: "inline",
+                margin: "0",
+                "margin-top": "1px",
+                position: "relative",
+                top: "5px",
+                width: "25px"
+              }
             }
           }
         ]
       }
     },
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        id: process.env.GTM_ID
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icons: [
+          {
+            src: "/icons/icon-48x48.png",
+            sizes: "48x48",
+            type: "image/png"
+          },
+          {
+            src: "/icons/icon-96x96.png",
+            sizes: "96x96",
+            type: "image/png"
+          },
+          {
+            src: "/icons/icon-144x144.png",
+            sizes: "144x144",
+            type: "image/png"
+          },
+          {
+            src: "/icons/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/icons/icon-256x256.png",
+            sizes: "256x256",
+            type: "image/png"
+          },
+          {
+            src: "/icons/icon-384x384.png",
+            sizes: "384x384",
+            type: "image/png"
+          },
+          {
+            src: "/icons/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
       }
     },
     {
@@ -113,12 +233,9 @@ module.exports = {
             site {
               siteMetadata {
                 title
-                author
-                email
                 description
-                language
                 siteUrl
-                keywords
+                site_url: siteUrl
               }
             }
           }
@@ -128,74 +245,55 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description:
-                    edge.node.frontmatter.description || edge.node.excerpt,
-                  author: site.siteMetadata.author,
-                  categories: Array.from(
-                    new Set([
-                      ...(site.siteMetadata.keywords || []),
-                      ...(edge.node.frontmatter.tags || [])
-                    ])
-                  ),
+                  description: edge.node.excerpt,
+                  date: edge.node.fields.prefix,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }]
-                })
-              })
+                });
+              });
             },
             query: `
               {
                 allMarkdownRemark(
                   limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: { frontmatter: { draft: { ne: true } } }
+                  sort: { order: DESC, fields: [fields___prefix] },
+                  filter: {
+                    fields: {
+                      prefix: { regex: "/[0-9]{4}.*/" },
+                      slug: { ne: null }
+                    }
+                  }
                 ) {
                   edges {
                     node {
                       excerpt
                       html
-                      fields { slug }
+                      fields {
+                        slug
+                        prefix
+                      }
                       frontmatter {
                         title
-                        date
-                        description
-                        tags
                       }
                     }
                   }
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Dennis Morello"
+            output: "/rss.xml"
           }
         ]
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Quicksand:300,400,500,700`],
-        display: `swap`
-      }
+      resolve: `gatsby-plugin-sitemap`
     },
-    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        name: `Dev Blog by Dennis Morello`,
-        short_name: `Dev Blog`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#363636`,
-        display: `minimal-ui`,
-        icon: `content/assets/logo-1024.png`,
-        include_favicon: true,
-        crossOrigin: `use-credentials`
+        include: /svg-icons/
       }
-    },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-catch-links`
+    }
   ]
-}
+};
