@@ -1,26 +1,27 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from "prop-types"
+import React from "react"
 
-import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
-import Footer from "../components/Footer/";
-import Header from "../components/Header";
+import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers"
+import Footer from "../components/Footer/"
+import Header from "../components/Header"
 
-export const ThemeContext = React.createContext(null);
-export const ScreenWidthContext = React.createContext(0);
-
-import themeObjectFromYaml from "../theme/theme.yaml";
-
+import themeObjectFromYaml from "../theme/theme.yaml"
 import 'typeface-open-sans/index.css'
+
+export const ThemeContext = React.createContext(null)
+export const ScreenWidthContext = React.createContext(0)
+
+
 
 class Layout extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       screenWidth: 0,
       headerMinimized: false,
       theme: themeObjectFromYaml
-    };
+    }
   }
 
   timeouts = {};
@@ -28,30 +29,30 @@ class Layout extends React.Component {
   componentDidMount() {
     this.setState({
       screenWidth: getScreenWidth()
-    });
+    })
     if (typeof window !== "undefined") {
-      window.addEventListener("resize", this.resizeThrottler, false);
+      window.addEventListener("resize", this.resizeThrottler, false)
     }
   }
 
   resizeThrottler = () => {
-    return timeoutThrottlerHandler(this.timeouts, "resize", 100, this.resizeHandler);
+    return timeoutThrottlerHandler(this.timeouts, "resize", 100, this.resizeHandler)
   };
 
   resizeHandler = () => {
-    this.setState({ screenWidth: getScreenWidth() });
+    this.setState({ screenWidth: getScreenWidth() })
   };
 
   isHomePage = () => {
     if (this.props.location.pathname === "/") {
-      return true;
+      return true
     }
 
-    return false;
+    return false
   };
 
   render() {
-    const { children } = this.props;
+    const { children } = this.props
 
     return (
       <ThemeContext.Provider value={this.state.theme}>
@@ -140,6 +141,6 @@ class Layout extends React.Component {
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired
-};
+}
 
-export default Layout;
+export default Layout
