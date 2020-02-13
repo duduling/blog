@@ -1,6 +1,6 @@
-require("dotenv").config();
-const config = require("./content/meta/config");
-const transformer = require("./src/utils/algolia");
+require("dotenv").config()
+const config = require("./content/meta/config")
+const transformer = require("./src/utils/algolia")
 
 const query = `{
   allMarkdownRemark( filter: { fields: { slug: { ne: null } } }) {
@@ -19,16 +19,16 @@ const query = `{
       }
     }
   }
-}`;
+}`
 
 const queries = [
   {
     query,
     transformer: ({ data }) => {
-      return data.allMarkdownRemark.edges.reduce(transformer, []);
+      return data.allMarkdownRemark.edges.reduce(transformer, [])
     }
   }
-];
+]
 
 module.exports = {
   // pathPrefix: config.pathPrefix,
@@ -198,11 +198,6 @@ module.exports = {
             type: "image/png"
           },
           {
-            src: "/icons/icon-144x144.png",
-            sizes: "144x144",
-            type: "image/png"
-          },
-          {
             src: "/icons/icon-192x192.png",
             sizes: "192x192",
             type: "image/png"
@@ -210,11 +205,6 @@ module.exports = {
           {
             src: "/icons/icon-256x256.png",
             sizes: "256x256",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-384x384.png",
-            sizes: "384x384",
             type: "image/png"
           },
           {
@@ -250,8 +240,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }]
-                });
-              });
+                })
+              })
             },
             query: `
               {
@@ -296,4 +286,4 @@ module.exports = {
       }
     }
   ]
-};
+}

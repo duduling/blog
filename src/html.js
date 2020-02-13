@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
 export default class HTML extends React.Component {
   render() {
@@ -19,7 +19,6 @@ export default class HTML extends React.Component {
           <link rel="apple-touch-icon" href="/icons/apple-icon-76x76.png" sizes="76x76" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-114x114.png" sizes="114x114" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" sizes="120x120" />
-          <link rel="apple-touch-icon" href="/icons/apple-icon-144x144.png" sizes="144x144" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" sizes="152x152" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180" />
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
@@ -32,7 +31,7 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
 }
 
@@ -43,4 +42,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array
-};
+}
