@@ -2,9 +2,9 @@ module.exports = {
   siteTitle: "Dudu", // <title>
   shortSiteTitle: "Duduling", // <title> ending for posts and pages
   siteDescription: "Dudu's doodle",
-  siteUrl: "https://dudu-doodle.netlify.com/",
+  siteUrl: "https://duduling.netlify.com/",
   // pathPrefix: "",
-  siteImage: "my-frofile.jpg",
+  siteImage: "preview.png",
   siteLanguage: "ko",
 
   /* author */
@@ -29,9 +29,5 @@ module.exports = {
   manifestDisplay: "standalone",
 
   // gravatar
-  // Use your Gravatar image. If empty then will use src/images/jpg/avatar.jpg
-  // Replace your email adress with md5-code.
-  // Example https://www.gravatar.com/avatar/g.strainovic@gmail.com ->
-  // gravatarImgMd5: "https://www.gravatar.com/avatar/1db853e4df386e8f699e4b35505dd8c6",
   gravatarImgMd5: "my-frofile.png",
 }

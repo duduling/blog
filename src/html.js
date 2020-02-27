@@ -24,6 +24,7 @@ export default class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
+          <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Noto+Sans+KR&display=swap" rel="stylesheet"></link>
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}

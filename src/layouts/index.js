@@ -11,8 +11,6 @@ import 'typeface-open-sans/index.css'
 export const ThemeContext = React.createContext(null)
 export const ScreenWidthContext = React.createContext(0)
 
-
-
 class Layout extends React.Component {
   constructor() {
     super()
@@ -95,14 +93,14 @@ class Layout extends React.Component {
               padding: 0;
             }
             body {
-              font-family: 'Open Sans', 'Arial', 'sans-serif';
+              font-family: 'Noto Sans KR', 'Open Sans', 'sans-serif';
               font-weight: 400;
             }
             h1,
             h2,
             h3 {
               font-weight: 600;
-              font-family: 'Open Sans', 'Arial', 'sans-serif';
+              font-family: 'Noto Sans KR', 'Open Sans', 'sans-serif';
               line-height: 1.1;
               letter-spacing: -0.03em;
               margin: 0;
