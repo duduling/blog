@@ -1,9 +1,9 @@
 # OPTIONS
 
 # SPACE
-space :
+space:
   # space options
-  default : 20px
+  default: 20px
   xxs: 2px
   xs: 5px
   s: 10px
@@ -11,20 +11,20 @@ space :
   l: 40px
   xl: 80px
   inset:
-    default : 20px
+    default: 20px
     xs: 5px
     s: 10px
     m: 20px
     l: 40px
   stack:
-    default : 0 0 20px 0
+    default: 0 0 20px 0
     xxs: 0 0 2px 0
     xs: 0 0 5px 0
     s: 0 0 10px 0
     m: 0 0 20px 0
     l: 0 0 40px 0
   inline:
-    default : 0 20px 0 0
+    default: 0 20px 0 0
     xxs: 0 2px 0 0
     xs: 0 5px 0 0
     s: 0 10px 0 0
@@ -55,7 +55,7 @@ color:
       j: &color-gray-10 '#666' #'#3e3e3c'
       k: '#2b2826'
     black: '#000000'
-  
+
   brand:
     primary: &color-brand-primary '#E39E22' #'#07889B' #'#C0B283' #'#856084' #'#616247'
     primaryLight: '#f9ebd2'
@@ -100,7 +100,6 @@ time:
     default: 0.5s
     long: 1s
 
-
 # GENERAL TOKENS
 background:
   color:
@@ -135,7 +134,6 @@ line:
 icon:
   color: *color-brand-primary
 
-
 # COMPONENT TOKENS
 hero:
   hide: true
@@ -154,4 +152,3 @@ header:
     default: 50px
     fixed: 50px;
     homepage: 50px;
-

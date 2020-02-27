@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import rehypeReact from "rehype-react";
-import Icons from "../../components/About/WebPresenceIcons";
-import ReImg from "./ReImg";
-import ReTracedSVGGallery from "./ReTracedSVGGallery";
-import { Link } from "gatsby";
+import React from "react"
+import PropTypes from "prop-types"
+import rehypeReact from "rehype-react"
+import Icons from "../../components/About/WebPresenceIcons"
+import ReImg from "./ReImg"
+import ReTracedSVGGallery from "./ReTracedSVGGallery"
+import { Link } from "gatsby"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { "re-icons": Icons , "re-img": ReImg , "re-link": Link, "re-tracedsvg-gallery": ReTracedSVGGallery }
+  components: { "re-icons": Icons, "re-img": ReImg, "re-link": Link, "re-tracedsvg-gallery": ReTracedSVGGallery }
 }).Compiler
 
 const Bodytext = props => {
-  const { content, theme } = props;
-  const html = props.content.html;
+  const { content, theme } = props
+  const html = props.content.html
 
   return (
     <React.Fragment>
@@ -91,18 +91,20 @@ const Bodytext = props => {
             background: ${theme.color.neutral.gray.c};
             text-shadow: none;
             color: inherit;
-            padding: 0.1em 0.3em 0.2em;
-            border-radius: 0.1em;
+            padding: 0.15em 0.35em 0.2em;
+            border-radius: 0.2em;
+            font-size: 0.8em;
+            font-family: 'IBM Plex Mono', 'Noto Sans KR','sans-serif';
           }
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Bodytext.propTypes = {
   content: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
-};
+}
 
-export default Bodytext;
+export default Bodytext
