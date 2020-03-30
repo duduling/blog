@@ -1,18 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Headline from "../Article/Headline";
-import Bodytext from "../Article/Bodytext";
+import Headline from "../Article/Headline"
+import Bodytext from "../Article/Bodytext"
 
 const Page = props => {
   const {
     page,
     page: {
       html,
-      frontmatter: { title }
+      frontmatter: { title },
+      slug
     },
     theme
-  } = props;
+  } = props
 
   return (
     <React.Fragment>
@@ -21,12 +22,12 @@ const Page = props => {
       </header>
       <Bodytext content={page} theme={theme} />
     </React.Fragment>
-  );
-};
+  )
+}
 
 Page.propTypes = {
   page: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
-};
+}
 
-export default Page;
+export default Page
