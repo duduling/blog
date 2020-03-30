@@ -1,16 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "prismjs/themes/prism-okaidia.css";
-import Headline from "../Article/Headline";
-import Bodytext from "../Article/Bodytext";
-import Meta from "./Meta";
-import Author from "./Author";
-import NextPrev from "./NextPrev";
+import React from "react"
+import PropTypes from "prop-types"
+import "prismjs/themes/prism-okaidia.css"
+
+import Headline from "../Article/Headline"
+import Bodytext from "../Article/Bodytext"
+import Meta from "./Meta"
+import NextPrev from "./NextPrev"
+
+import Disqus from 'gatsby-plugin-disqus'
 
 const Post = props => {
   const {
     post,
     post: {
+      id,
       html,
       htmlAst,
       fields: { prefix, slug },
@@ -20,8 +23,15 @@ const Post = props => {
     authornote,
     next: nextPost,
     prev: prevPost,
-    theme
-  } = props;
+    theme,
+    history
+  } = props
+
+  let disqusConfig = {
+    url: `http://duduling-blog.netlify.com${slug}`,
+    identifier: id,
+    title,
+  }
 
   return (
     <React.Fragment>
@@ -31,12 +41,13 @@ const Post = props => {
       </header>
       <Bodytext content={post} theme={theme} />
       <footer>
-         {/*<Author note={authornote} theme={theme} /> */}
-         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
+        {/*<Author note={authornote} theme={theme} /> */}
+        <NextPrev next={nextPost} prev={prevPost} theme={theme} />
       </footer>
+      <Disqus config={disqusConfig} />
     </React.Fragment>
-  );
-};
+  )
+}
 
 Post.propTypes = {
   post: PropTypes.object.isRequired,
@@ -44,6 +55,6 @@ Post.propTypes = {
   next: PropTypes.object,
   prev: PropTypes.object,
   theme: PropTypes.object.isRequired
-};
+}
 
-export default Post;
+export default Post

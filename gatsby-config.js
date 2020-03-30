@@ -59,7 +59,8 @@ module.exports = {
         ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
         : "",
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
-    }
+    },
+    disqusShortname: 'duduling-blog'
   },
   plugins: [
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
@@ -71,6 +72,12 @@ module.exports = {
         //jsxPragma: `jsx`, // defaults to "React" ??
         allExtensions: true
       },
+    },
+    {
+      resolve: 'gatsby-plugin-disqus',
+      options: {
+        shortname: 'duduling-blog'
+      }
     },
     {
       resolve: `gatsby-plugin-layout`,
