@@ -8,6 +8,7 @@ import Meta from "./Meta"
 import NextPrev from "./NextPrev"
 
 import Disqus from 'gatsby-plugin-disqus'
+import Author from './Author'
 
 const Post = props => {
   const {
@@ -27,7 +28,7 @@ const Post = props => {
     history
   } = props
 
-  let disqusConfig = {
+  const disqusConfig = {
     url: `http://duduling-blog.netlify.com${slug}`,
     identifier: id,
     title,
@@ -41,10 +42,10 @@ const Post = props => {
       </header>
       <Bodytext content={post} theme={theme} />
       <footer>
-        {/*<Author note={authornote} theme={theme} /> */}
+        {/* <Author note={authornote} theme={theme} /> */}
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
+        <Disqus config={disqusConfig} />
       </footer>
-      <Disqus config={disqusConfig} />
     </React.Fragment>
   )
 }
