@@ -26,42 +26,45 @@ const ReImg = (props) => {
         overflow: 'hidden'
     }
 
-    if (!props.hovereffect) {
-        return <a href={href} target={"_blank"}>
-            <Picture
-                fluid={fluid}
-                title={props.title}
-                style={relativeStyle}
-            />
-        </a>
-    }
-
     return (
-        <a href={href} target={"_blank"}>
-            <div className="imgContainer">
-                <img src={fluid.tracedSVG} title={props.title} style={relativeStyle} alt={''} />
-                <Picture
-                    fluid={fluid}
-                    title={props.title}
-                    style={absoluteStyle}
-                />
-            </div>
-            <style jsx>{`
-            .imgContainer {
-                position: relative;
-                top: 0;
-                left: 0;
-            }
-            @from-width desktop {
-                :global(picture) {
-                    transition: 300ms ease-in-out;
-                }
-                :global(.imgContainer > .gatsby-image-wrapper > picture):hover {
-                    opacity: 0;
-                }
-            }
-            `}</style>
-        </a>
+        <>
+            {props.hovereffect ? (
+                <a href={href} target={"_blank"}>
+
+                    <div className="imgContainer">
+                        <img src={fluid.tracedSVG} title={props.title} style={relativeStyle} alt={''} />
+                        <Picture
+                            fluid={fluid}
+                            title={props.title}
+                            style={absoluteStyle}
+                        />
+                    </div>
+                    <style jsx>{`
+                        .imgContainer {
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                        }
+                        @from-width desktop {
+                            :global(picture) {
+                                transition: 300ms ease-in-out;
+                            }
+                            :global(.imgContainer > .gatsby-image-wrapper > picture):hover {
+                                opacity: 0;
+                            }
+                        }
+                        `}</style>
+                </a>
+            ) : (
+                    <a href={href} target={"_blank"}>
+                        <Picture
+                            fluid={fluid}
+                            title={props.title}
+                            style={relativeStyle}
+                        />
+                    </a>
+                )}
+        </>
     )
 }
 

@@ -56,6 +56,9 @@ const Bodytext = props => {
             font-size: ${theme.font.size.s};
             line-height: ${theme.font.lineHeight.xxl};
             margin: 0 0 1.5em;
+            :global(img) {
+              width: 100%;
+            }
           }
           
           :global(ul) {
@@ -86,6 +89,18 @@ const Bodytext = props => {
             border-radius: ${theme.size.radius.default};
             overflow: hidden;
             border: 1px solid ${theme.line.color};
+            pointer-events: none;
+          }
+          :global(pre) {
+            margin: 0.5em 0 3em;
+          }
+          :global(code.language-dummy) {
+            text-shadow: none;
+            color: inherit;
+            padding: 0.15em 0.35em 0.2em;
+            border-radius: 0.2em;
+            font-size: 0.9em;
+            font-family: 'IBM Plex Mono', 'Noto Sans KR','sans-serif';
           }
           :global(code.language-text) {
             background: ${theme.color.neutral.gray.c};
