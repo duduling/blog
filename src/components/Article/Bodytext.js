@@ -56,6 +56,9 @@ const Bodytext = props => {
             font-size: ${theme.font.size.s};
             line-height: ${theme.font.lineHeight.xxl};
             margin: 0 0 1.5em;
+            :global(img) {
+              width: 100%;
+            }
           }
           
           :global(ul) {
@@ -86,6 +89,7 @@ const Bodytext = props => {
             border-radius: ${theme.size.radius.default};
             overflow: hidden;
             border: 1px solid ${theme.line.color};
+            pointer-events: none;
           }
           :global(code.language-text) {
             background: ${theme.color.neutral.gray.c};
