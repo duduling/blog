@@ -95,3 +95,6 @@ public
 
 # End of https://www.gitignore.io/api/node
 .env
+
+# Mock Posts
+content/mock_posts
