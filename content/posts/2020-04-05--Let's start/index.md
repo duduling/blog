@@ -1,13 +1,13 @@
 ---
 title: Let's start 🏄🏻‍♂️
 tags: ['Etc']
-cover: cover.png
+cover: cover.jpg
 author: Duduling
 ---
 
 ##### 잊지 않기 위해 스스로 보관하기 위한 포스팅으로 편한 말로 적었습니다. 양해 부탁드립니다. 😂
 
-![duduling preview image](./cover.png)
+![duduling preview image](./cover.jpg)
 
 ## 블로그에 도전하기!!
 
