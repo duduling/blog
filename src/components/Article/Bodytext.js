@@ -55,7 +55,7 @@ const Bodytext = props => {
           :global(p) {
             font-size: ${theme.font.size.s};
             line-height: ${theme.font.lineHeight.xxl};
-            margin: 0 0 1.5em;
+            margin: 1.5em 0;
             :global(img) {
               width: 100%;
             }
@@ -70,12 +70,13 @@ const Bodytext = props => {
             margin: 0.7em 0;
             line-height: 1.6;
             font-size: ${theme.font.size.s};
-            list-style-type: square;
+            list-style-type: disc;
           }
           :global(a) {
             font-weight: ${theme.font.weight.bold};
             color: ${theme.color.brand.primary};
             text-decoration: none;
+            word-break: break-all;
           }
           @from-width desktop {
             :global(a:hover) {
