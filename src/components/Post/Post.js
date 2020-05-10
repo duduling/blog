@@ -28,13 +28,11 @@ const Post = props => {
     history
   } = props
 
-  console.log(`id : ${id}`)
-
-  // const disqusConfig = {
-  //   url: `http://duduling-blog.netlify.com${slug}`,
-  //   identifier: id,
-  //   title,
-  // }
+  const disqusConfig = {
+    url: `http://duduling-blog.netlify.com${slug}`,
+    identifier: id,
+    title,
+  }
 
   return (
     <React.Fragment>
@@ -46,7 +44,7 @@ const Post = props => {
       <footer>
         {/* <Author note={authornote} theme={theme} /> */}
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
-        {/* <Disqus config={disqusConfig} /> */}
+        <Disqus config={disqusConfig} />
       </footer>
     </React.Fragment>
   )
