@@ -1,6 +1,6 @@
 ---
-title: Sum of Digits / Digital Root (6 kyu) 👨🏻‍💻
-tags: ['Codewars', '6 kyu']
+title: 크레인 인형뽑기 게임 👨🏻‍💻
+tags: ['Algorithm', '2019 카카오 개발자 겨울 인턴십']
 cover: cover.jpg
 author: Duduling
 ---
@@ -9,7 +9,7 @@ author: Duduling
 
 ![duduling preview image](cover.jpg)
 
-## Sum of Digits / Digital Root (6 kyu)
+## 크레인 인형뽑기 게임
 
 ### Instructions
 
