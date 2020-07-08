@@ -199,6 +199,6 @@ src/styles
 
 <div align="center">
 
-<sub><sup>Project by <a href="https://github.com/JaeYeopHan">@Jbee</a></sup></sub><small>✌</small>
+<sub><sup>Project by <a href="https://github.com/duduling">@Duduling</a></sup></sub><small>✌</small>
 
 </div>
