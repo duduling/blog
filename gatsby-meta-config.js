@@ -2,11 +2,12 @@ module.exports = {
   title: `Let's doodle`,
   description: `Blog posted about ...`,
   author: `[Duduling]`,
-  introduction: `Front-End Developer`,
+  introduction: `함께 소통하며 개발하는 것을 좋아하고 개발을 위한 개발보다 사람을 위한 개발을 하기를 원하는 Front-End Developer 🙇🏻‍♂️`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `Duduling`, // Your GitHub account
+    gmail: `duduling20@gmail.com`, // Your Gmail account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
