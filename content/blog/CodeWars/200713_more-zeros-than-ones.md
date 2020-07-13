@@ -1,11 +1,11 @@
 ---
-title: More Zeros than Ones (6 kyu) 👨🏻‍💻
+title: More Zeros than Ones (6 kyu) 🧗🏻
 date: 2020-07-13 00:12:24
 category: CodeWars
-draft: true
+draft: false
 ---
 
-![](./images/more-zeros-than-ones.jpg)
+![](./images/200713_more-zeros-than-ones.jpg)
 
 ## More Zeros than Ones (6 kyu)
 
