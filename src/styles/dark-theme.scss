@@ -20,6 +20,11 @@ body.dark {
     }
   }
 
+  table {
+    border-top: 1px solid $dark-category-border-color;
+    border-left: 6px solid $dark-category-border-color;
+  }
+
   .category-container {
     border-top: 1px solid $dark-category-border-color;
     border-bottom: 1px solid $dark-category-border-color;

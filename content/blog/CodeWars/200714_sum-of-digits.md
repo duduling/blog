@@ -1,15 +1,11 @@
 ---
 title: Sum of Digits / Digital Root (6 kyu) 🧗🏻
-date: 2020-07-14 21:03:01
+date: 2020-07-14 22:13:01
 category: CodeWars
 draft: false
 ---
 
-![duduling preview image](./images/200714_sum-of-digits.jpg)
-
-## Sum of Digits / Digital Root (6 kyu)
-
-### Instructions
+## Instructions
 
 In this kata, you must create a `digital root` function.
 
@@ -46,7 +42,7 @@ digital_root(493193)
 각 자리 숫자의 합이 한 자리 숫자가 되는 값을 구해라.  
 -> 한 자리의 숫자가 될 때까지 반복하는 구조 -> 재귀 함수로 접근
 
-### Solution
+## Solution
 
 ```js
 function digital_root(n) {
@@ -67,7 +63,7 @@ function digital_root(n) {
 }
 ```
 
-##### Comment
+## Comment
 
 처음에 `return` 함수로 재귀를 하다가 stack overflow가 발생했다. 그래서 while문으로 안에서 반복하도록 변경하였다. 풀이 과정은 처음에 n이 한 자리 숫자일 때 바로 return 하고 `answer`과 `splitNumberArray를` 초기화 한다. 그 후 `splitNumberArray의` 배열의 자리 수가 1(한 자리) 이상이면 while문 안에서 재귀 하면서 답을 찾는다. 그 후 배열의 자리 수가 1(한 자리)가 되면 조건문을 빠져나와 `answer`을 return 한다.
 
@@ -78,8 +74,6 @@ function digital_root(n) {
   return ((n - 1) % 9) + 1;
 }
 ```
-
-##### Comment
 
 두번째 풀이는 다른 사람의 풀이인데 독특하게 접근해서 같이 올려봤다. 나의 부족한 필력으로 최대한 노력해서 풀이해보겠다.
 우선 9의 배수의 공식을 알아야 한다. 각 자리의 숫자의 합이 9로 나누어지면 9의 배수이다.
@@ -100,4 +94,4 @@ n = 1532790
 
 ##### 출처
 
-- https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
+https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript)

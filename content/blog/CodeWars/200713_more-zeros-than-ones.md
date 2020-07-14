@@ -5,11 +5,7 @@ category: CodeWars
 draft: false
 ---
 
-![](./images/200713_more-zeros-than-ones.jpg)
-
-## More Zeros than Ones (6 kyu)
-
-### Instructions
+## Instructions
 
 Create a moreZeros function which will receive a string for input, and return an array (or null terminated string in C) containing only the characters from that string whose binary representation of its ASCII value consists of more zeros than ones.
 
@@ -32,7 +28,7 @@ All input will be valid strings of length > 0. Leading zeros in binary should no
 >
 > ##### \* 중복된 값이 없어야 함
 
-### Solution
+## Solution
 
 ```js
 function moreZeros(s) {
@@ -54,8 +50,8 @@ function moreZeros(s) {
 }
 ```
 
-#### Comment
+## Comment
 
-> 초반에 작성한 코드보다 `[...new Set(array)]`로 중복된 배열을 제거하는 것으로 코드를 많이 줄였다.
+초반에 작성한 코드보다 `[...new Set(array)]`로 중복된 배열을 제거하는 것으로 코드를 많이 줄였다.
 
 ###### 출처 : https://www.codewars.com/kata/5d41e16d8bad42002208fe1a

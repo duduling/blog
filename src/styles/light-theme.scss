@@ -19,6 +19,24 @@ body.light {
     }
   }
 
+  table {
+    width: auto;
+    border-top: 1px solid $light-category-border-color;
+    border-left: 1px solid $light-category-border-color;
+    thead {
+      background-color: #F5F5F5;
+    }
+    th, td {
+      border-right: 1px solid $light-category-border-color;
+      &:first-of-type {
+        padding-left: 0.75em;
+      }
+      &:last-of-type {
+        padding-right: 0.75em;
+      }
+    }
+  }
+
   .category-container {
     border-top: 1px solid $light-category-border-color;
     border-bottom: 1px solid $light-category-border-color;
