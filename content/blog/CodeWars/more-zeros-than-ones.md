@@ -54,4 +54,6 @@ function moreZeros(s) {
 
 초반에 작성한 코드보다 `[...new Set(array)]`로 중복된 배열을 제거하는 것으로 코드를 많이 줄였다.
 
-###### 출처 : https://www.codewars.com/kata/5d41e16d8bad42002208fe1a
+##### 출처
+
+https://www.codewars.com/kata/5d41e16d8bad42002208fe1a
