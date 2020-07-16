@@ -13,7 +13,7 @@ module.exports = {
     linkedin: ``, // Your LinkedIn account
   },
   icon: `content/assets/felog.png`, // Add your favicon
-  keywords: [`develop`, `blog`, `FE`, `front-end`],
+  keywords: [`develop`, `developer`, `blog`, `FE`, `front-end`],
   comment: {
     disqusShortName: 'duduling-blog', // Your disqus-short-name. check disqus.com.
     utterances: '', // Your repository for archive comment
