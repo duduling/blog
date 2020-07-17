@@ -1,7 +1,7 @@
 ---
 title: "Let's duduling"
 date: 2020-07-12 20:11:22
-category: etc
+category: Etc
 draft: false
 ---
 
