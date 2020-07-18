@@ -4,6 +4,7 @@ module.exports = {
   author: `[Duduling]`,
   introduction: `함께 소통하며 개발하는 것을 좋아하고 개발을 위한 개발보다 사람을 위한 개발을 하기를 원하는 Front-End Developer 🙇🏻‍♂️`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  goodByeComment: `😍 피드백은 언제나 사랑입니다. 😍`,
   social: {
     twitter: ``, // Your Twitter account
     github: `Duduling`, // Your GitHub account

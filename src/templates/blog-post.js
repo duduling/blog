@@ -26,7 +26,7 @@ export default ({ data, pageContext, location }) => {
 
   const post = data.markdownRemark
   const metaData = data.site.siteMetadata
-  const { title, comment, siteUrl, author, sponsor } = metaData
+  const { title, comment, siteUrl, goodByeComment, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
   const { title: postTitle, date, thumbnail } = post.frontmatter
   const thumbnailSrc = thumbnail
@@ -43,6 +43,7 @@ export default ({ data, pageContext, location }) => {
       <PostTitle title={postTitle} />
       <PostDate date={date} />
       <PostContainer html={post.html} />
+      <h5 style={{ textAlign: 'center', marginTop: '32px' }}>{goodByeComment}</h5>
       <SocialShare title={postTitle} author={author} />
       {/* {!!sponsor.buyMeACoffeeId && (
         <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
@@ -70,6 +71,7 @@ export const pageQuery = graphql`
         title
         author
         siteUrl
+        goodByeComment
         comment {
           disqusShortName
           utterances
