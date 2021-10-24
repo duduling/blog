@@ -24,7 +24,7 @@ const DOCS_OPTIONS = [
 const TIL_OPTIONS = [
   {
     label: 'TIL in 2021',
-    to: 'til/2021/intro',
+    to: 'til/2021',
   },
 ]
 
