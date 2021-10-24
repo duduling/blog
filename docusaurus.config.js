@@ -1,6 +1,33 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const DOCS_OPTIONS = [
+  {
+    label: 'Algorithms',
+    to: 'docs/algorithms/intro',
+  },
+  {
+    label: 'CS',
+    to: 'docs/cs/intro',
+  },
+  { to: 'docs/frontend/intro', label: 'Front-End' },
+  {
+    label: 'DevOps',
+    to: 'docs/devOps/intro',
+  },
+  {
+    label: 'ETC',
+    to: 'docs/etc/intro',
+  },
+]
+
+const TIL_OPTIONS = [
+  {
+    label: 'TIL in 2021',
+    to: 'til/2021/intro',
+  },
+]
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Let's Duduling",
@@ -20,17 +47,25 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
-        // {
-        //   type: 'doc',
-        //   docId: 'intro',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/duduling',
+          label: 'Docs',
+          position: 'left',
+          items: DOCS_OPTIONS,
+        },
+        {
+          label: 'Logs',
+          position: 'left',
+          items: TIL_OPTIONS,
+        },
+        {
+          label: 'Resume',
+          href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
+          position: 'left',
+        },
+        {
           label: 'GitHub',
-          position: 'right',
+          href: 'https://github.com/duduling',
+          position: 'left',
         },
       ],
     },
@@ -39,36 +74,18 @@ module.exports = {
       links: [
         {
           title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
+          items: DOCS_OPTIONS,
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
+          title: 'Blog',
+          items: TIL_OPTIONS,
         },
         {
-          title: 'More',
+          title: 'Personal Links',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Resume',
+              href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
             },
             {
               label: 'GitHub',
@@ -77,7 +94,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Duduling, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -92,17 +109,22 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/duduling/blog/tree/main/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'tilTwoZeroTwoOne',
+        path: './til/2021',
+        routeBasePath: 'til/2021',
+        editUrl: 'https://github.com/duduling/blog/tree/main/til',
       },
     ],
   ],
