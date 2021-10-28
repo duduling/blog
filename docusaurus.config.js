@@ -58,15 +58,15 @@ module.exports = {
           items: TIL_OPTIONS,
         },
         {
-          label: 'Resume',
-          href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
-          position: 'left',
-        },
-        {
           label: 'GitHub',
           href: 'https://github.com/duduling',
           position: 'left',
         },
+        // {
+        //   label: 'Resume',
+        //   href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
+        //   position: 'left',
+        // },
       ],
     },
     footer: {
@@ -77,20 +77,20 @@ module.exports = {
           items: DOCS_OPTIONS,
         },
         {
-          title: 'Blog',
+          title: 'TIL',
           items: TIL_OPTIONS,
         },
         {
           title: 'Personal Links',
           items: [
             {
-              label: 'Resume',
-              href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
-            },
-            {
               label: 'GitHub',
               href: 'https://github.com/duduling',
             },
+            // {
+            //   label: 'Resume',
+            //   href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
+            // },
           ],
         },
       ],
