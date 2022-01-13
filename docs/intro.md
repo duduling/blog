@@ -2,34 +2,12 @@
 sidebar_position: 1
 ---
 
-# Index
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+그냥 애매하게 이것 저것 가공되지 않은 글들을 올리는 공간
 
-## Getting Started
+## Code Wars
 
-Get started by **creating a new site**.
+`Code Wars` 라는 코딩 테스트 사이트에서 푸는 문제들을 올리는 곳이다.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+[Code Wars 바로 가기](https://www.codewars.com/)
