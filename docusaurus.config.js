@@ -3,28 +3,32 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const DOCS_OPTIONS = [
   {
-    label: 'Algorithms',
-    to: 'docs/algorithms/intro',
+    label: 'Code Wars',
+    to: 'docs/code-wars/intro',
   },
-  {
-    label: 'CS',
-    to: 'docs/cs/intro',
-  },
-  { to: 'docs/frontend/intro', label: 'Front-End' },
-  {
-    label: 'DevOps',
-    to: 'docs/devOps/intro',
-  },
-  {
-    label: 'ETC',
-    to: 'docs/etc/intro',
-  },
+  // {
+  //   label: 'CS',
+  //   to: 'docs/cs/intro',
+  // },
+  // { to: 'docs/frontend/intro', label: 'Front-End' },
+  // {
+  //   label: 'DevOps',
+  //   to: 'docs/devOps/intro',
+  // },
+  // {
+  //   label: 'ETC',
+  //   to: 'docs/etc/intro',
+  // },
 ]
 
 const TIL_OPTIONS = [
   {
     label: 'TIL in 2021',
     to: 'til/2021',
+  },
+  {
+    label: 'TIL in 2022',
+    to: 'til/2022',
   },
 ]
 
@@ -124,6 +128,15 @@ module.exports = {
         id: 'tilTwoZeroTwoOne',
         path: './til/2021',
         routeBasePath: 'til/2021',
+        editUrl: 'https://github.com/duduling/blog/tree/main/til',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'tilTwoZeroTwoTwo',
+        path: './til/2022',
+        routeBasePath: 'til/2022',
         editUrl: 'https://github.com/duduling/blog/tree/main/til',
       },
     ],
