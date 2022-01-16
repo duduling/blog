@@ -23,10 +23,6 @@ const DOCS_OPTIONS = [
 
 const TIL_OPTIONS = [
   {
-    label: 'TIL in 2021',
-    to: 'til/2021',
-  },
-  {
     label: 'TIL in 2022',
     to: 'til/2022',
   },
@@ -122,15 +118,6 @@ module.exports = {
     ],
   ],
   plugins: [
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'tilTwoZeroTwoOne',
-        path: './til/2021',
-        routeBasePath: 'til/2021',
-        editUrl: 'https://github.com/duduling/blog/tree/main/til',
-      },
-    ],
     [
       '@docusaurus/plugin-content-blog',
       {
