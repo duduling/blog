@@ -1,4 +1,4 @@
-# 6kyu - Take a Ten Minute Walk
+# Take a Ten Minute Walk (6kyu)
 
 ## Instructions
 
@@ -10,14 +10,35 @@ You live in the city of Cartesia where all roads are laid out in a perfect grid.
 
 ```js
 describe("Tests", () => {
-    it("test", () => {
-//some test cases for you...
-        Test.expect(isValidWalk(['n','s','n','s','n','s','n','s','n','s']), 'should return true');
-        Test.expect(!isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']), 'should return false');
-        Test.expect(!isValidWalk(['w']), 'should return false');
-        Test.expect(!isValidWalk(['n','n','n','s','n','s','n','s','n','s']), 'should return false');
-
-    });
+  it("test", () => {
+    //some test cases for you...
+    Test.expect(
+      isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]),
+      "should return true"
+    );
+    Test.expect(
+      !isValidWalk([
+        "w",
+        "e",
+        "w",
+        "e",
+        "w",
+        "e",
+        "w",
+        "e",
+        "w",
+        "e",
+        "w",
+        "e",
+      ]),
+      "should return false"
+    );
+    Test.expect(!isValidWalk(["w"]), "should return false");
+    Test.expect(
+      !isValidWalk(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]),
+      "should return false"
+    );
+  });
 });
 ```
 
@@ -25,20 +46,32 @@ describe("Tests", () => {
 
 ```js
 function isValidWalk(walk) {
-  if(walk.length !== 10) return false
-    
-  const { x, y } = walk.reduce(({x, y}, action) => {
-      switch(action){
-          case 'e': x -= 1; break;
-          case 'w': x += 1; break;
-          case 's': y += 1; break;
-          case 'n': y -= 1; break;
-          default: break;
+  if (walk.length !== 10) return false;
+
+  const { x, y } = walk.reduce(
+    ({ x, y }, action) => {
+      switch (action) {
+        case "e":
+          x -= 1;
+          break;
+        case "w":
+          x += 1;
+          break;
+        case "s":
+          y += 1;
+          break;
+        case "n":
+          y -= 1;
+          break;
+        default:
+          break;
       }
-      return { x, y }
-    }, { x: 0, y: 0 })
-    
-  return x === 0 && y === 0
+      return { x, y };
+    },
+    { x: 0, y: 0 }
+  );
+
+  return x === 0 && y === 0;
 }
 ```
 

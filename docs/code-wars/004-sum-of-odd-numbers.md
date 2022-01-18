@@ -1,4 +1,4 @@
-# 7kyu - Sum of odd numbers
+# Sum of odd numbers (7kyu)
 
 ## Instructions
 
@@ -80,3 +80,5 @@ function rowSumOddNumbers(n) {
 > `n * n`을 하면 해당 줄의 평균 값이 나온다. 그 상태에서 n번째 줄은 n개가 있으니 n을 더 곱해주면 된다. 결국 `n * n * n` 으로 n의 3승이 된다. `Math.pow`를 이용하여 n의 3승을 `return` 해주면 간단하게 해결된다.
 
 ## Review
+
+이번 문제는 그 계산식을 파악한다면 구현 자체는 오히려 쉬웠던 것 같다.

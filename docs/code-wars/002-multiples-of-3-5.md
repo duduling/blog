@@ -1,4 +1,4 @@
-# 6kyu - Multiples of 3 or 5
+# Multiples of 3 or 5 (6kyu)
 
 ## Instructions
 
@@ -13,29 +13,29 @@
 ## Sample Tests
 
 ```js
-const { assert } = require("chai")
+const { assert } = require("chai");
 
 function test(n, expected) {
-  let actual = solution(n)
-  it(`Expected ${expected}, got ${actual}`, () => {  
-  assert.strictEqual(actual, expected)
-    })
+  let actual = solution(n);
+  it(`Expected ${expected}, got ${actual}`, () => {
+    assert.strictEqual(actual, expected);
+  });
 }
 
-describe("basic tests", function(){
-  test(10,23)
-})
+describe("basic tests", function () {
+  test(10, 23);
+});
 ```
 
 ## Solution
 
 ```js
-function solution(number){
+function solution(number) {
   var sum = 0;
-  
-  for(var i = 1;i< number; i++){
-    if(i % 3 == 0 || i % 5 == 0){
-      sum += i
+
+  for (var i = 1; i < number; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i;
     }
   }
   return sum;
