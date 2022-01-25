@@ -19,3 +19,5 @@ CodeWars에서 푼 문제 모음
 ## 5kyu
 
 - [Moving Zeros To The End (5kyu)](/docs/code-wars/moving-zeros-to-the-end)
+
+- [Calculating with Functions (5kyu)](/docs/code-wars/calculating-with-functions)

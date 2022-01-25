@@ -63,20 +63,22 @@ const dividedBy = (preNum) => (nextNum) => parseInt(nextNum / preNum, 10);
 ### Solution B
 
 ```js
-const zero = (calc) => (calc ? calc(0) : 0);
-const one = (calc) => (calc ? calc(1) : 1);
-const two = (calc) => (calc ? calc(2) : 2);
-const three = (calc) => (calc ? calc(3) : 3);
-const four = (calc) => (calc ? calc(4) : 4);
-const five = (calc) => (calc ? calc(5) : 5);
-const six = (calc) => (calc ? calc(6) : 6);
-const seven = (clac) => (clac ? clac(7) : 7);
-const eight = (calc) => (calc ? calc(8) : 8);
-const nine = (calc) => (calc ? calc(9) : 9);
+const functionalCalc = (num) => (clac) => clac ? clac(num) : num;
+
+const zero = functionalCalc(0);
+const one = functionalCalc(1);
+const two = functionalCalc(2);
+const three = functionalCalc(3);
+const four = functionalCalc(4);
+const five = functionalCalc(5);
+const six = functionalCalc(6);
+const seven = functionalCalc(7);
+const eight = functionalCalc(8);
+const nine = functionalCalc(9);
 
 const plus = (preNum) => (nextNum) => preNum + nextNum;
 const minus = (preNum) => (nextNum) => nextNum - preNum;
-const times = (preNum) => (nextNum) => preNum * nextNum;
+const times = (preNum) => (nextNum) => nextNum * preNum;
 const dividedBy = (preNum) => (nextNum) => parseInt(nextNum / preNum, 10);
 ```
 
