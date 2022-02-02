@@ -62,7 +62,7 @@ var newStr = str.replace(regexp|substr, newSubstr|function)
 
 > 단순히 문자를 받을 수도 있지만 첫번째 인자로는 정규식이 두번째 인자로는 함수가 들어갈 수 있다.
 
-### 참고 자료
+### References
 
 [CodeWars - Convert string to camel case (6kyu)](https://www.codewars.com/kata/517abf86da9663f1d2000003/train/javascript)
 

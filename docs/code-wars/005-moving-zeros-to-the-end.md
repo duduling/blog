@@ -69,7 +69,7 @@ var moveZeros = function (arr) {
 
 > 배열의 끝에서부터 순차적으로 callback 함수를 실행한다.
 
-### 참고 자료
+### References
 
 [CodeWars - Moving Zeros To The End (5kyu)](https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/javascript)
 

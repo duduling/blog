@@ -86,6 +86,6 @@ const dividedBy = (preNum) => (nextNum) => parseInt(nextNum / preNum, 10);
 
 이번 문제는 별 생각없이 A의 솔루션으로 풀었다. 근데 뭔가 좀 더 생각했다면 B의 방법이 좀 더 Functional 한 느낌이지 않았을까?
 
-### 참고 자료
+### References
 
 [CodeWars - Calculating with Functions (5kyu)](https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript)

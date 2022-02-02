@@ -50,7 +50,7 @@ function order(words) {
 
 이번 문제도 정규식을 활용한 문제인데 sort를 이용하여 풀었다.
 
-### 참고 자료
+### References
 
 [CodeWars - Your order, please (6kyu)](https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/javascript)
 

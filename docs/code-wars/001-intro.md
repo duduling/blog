@@ -21,3 +21,7 @@ CodeWars에서 푼 문제 모음
 - [Moving Zeros To The End (5kyu)](/docs/code-wars/moving-zeros-to-the-end)
 
 - [Calculating with Functions (5kyu)](/docs/code-wars/calculating-with-functions)
+
+## 4kyu
+
+- [Human readable duration format (4kyu)](/docs/code-wars/human-readable-duration-format)
