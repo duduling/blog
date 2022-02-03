@@ -1,15 +1,15 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const DOCS_OPTIONS = [
   {
-    label: 'Code Wars',
-    to: 'docs/code-wars/intro',
+    label: "Code Wars",
+    to: "docs/coding-test/intro",
   },
-  // {
-  //   label: 'CS',
-  //   to: 'docs/cs/intro',
-  // },
+  {
+    label: "CS",
+    to: "docs/cs/data-structure-algorithm/intro",
+  },
   // { to: 'docs/frontend/intro', label: 'Front-End' },
   // {
   //   label: 'DevOps',
@@ -19,48 +19,48 @@ const DOCS_OPTIONS = [
   //   label: 'ETC',
   //   to: 'docs/etc/intro',
   // },
-]
+];
 
 const TIL_OPTIONS = [
   {
-    label: 'TIL in 2022',
-    to: 'til/2022',
+    label: "TIL in 2022",
+    to: "til/2022",
   },
-]
+];
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Let's Duduling",
   tagline: "Between Googling And Doodle",
-  url: 'https://blog-duduling.vercel.app',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'Duduling', // Usually your GitHub org/user name.
-  projectName: 'blog', // Usually your repo name.
+  url: "https://blog-duduling.vercel.app",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "Duduling", // Usually your GitHub org/user name.
+  projectName: "blog", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "Let's Duduling",
       logo: {
-        alt: 'Duduling Logo',
-        src: 'img/logo.svg',
+        alt: "Duduling Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          label: 'Docs',
-          position: 'left',
+          label: "Docs",
+          position: "left",
           items: DOCS_OPTIONS,
         },
         {
-          label: 'Logs',
-          position: 'left',
+          label: "Logs",
+          position: "left",
           items: TIL_OPTIONS,
         },
         {
-          label: 'GitHub',
-          href: 'https://github.com/duduling',
-          position: 'left',
+          label: "GitHub",
+          href: "https://github.com/duduling",
+          position: "left",
         },
         // {
         //   label: 'Resume',
@@ -70,22 +70,22 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: DOCS_OPTIONS,
         },
         {
-          title: 'TIL',
+          title: "TIL",
           items: TIL_OPTIONS,
         },
         {
-          title: 'Personal Links',
+          title: "Personal Links",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/duduling',
+              label: "GitHub",
+              href: "https://github.com/duduling",
             },
             // {
             //   label: 'Resume',
@@ -103,28 +103,27 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/duduling/blog/tree/main/docs',
+          editUrl: "https://github.com/duduling/blog/tree/main/docs",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
   ],
   plugins: [
     [
-      '@docusaurus/plugin-content-blog',
+      "@docusaurus/plugin-content-blog",
       {
-        id: 'tilTwoZeroTwoTwo',
-        path: './til/2022',
-        routeBasePath: 'til/2022',
-        editUrl: 'https://github.com/duduling/blog/tree/main/til',
+        id: "tilTwoZeroTwoTwo",
+        path: "./til/2022",
+        routeBasePath: "til/2022",
+        editUrl: "https://github.com/duduling/blog/tree/main/til",
       },
     ],
   ],
