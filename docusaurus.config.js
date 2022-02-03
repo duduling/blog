@@ -3,12 +3,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const DOCS_OPTIONS = [
   {
-    label: "Code Wars",
+    label: "Coding Test",
     to: "docs/coding-test/intro",
   },
   {
-    label: "CS",
-    to: "docs/cs/data-structure-algorithm/intro",
+    label: "Computer Science",
+    to: "docs/cs/data-structure-algorithm/big-o",
   },
   // { to: 'docs/frontend/intro', label: 'Front-End' },
   // {

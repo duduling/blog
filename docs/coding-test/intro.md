@@ -4,10 +4,30 @@ sidebar_position: 1
 
 # Intro
 
-그냥 애매하게 이것 저것 가공되지 않은 글들을 올리는 공간
-
 ## Code Wars
 
-`Code Wars` 라는 코딩 테스트 사이트에서 푸는 문제들을 올리는 곳이다.
+`Code Wars` 라는 코딩 테스트 사이트에서 푸는 문제들을 올리는 곳이다. [Code wars 바로가기](https://www.codewars.com/)
 
-[Code Wars 바로 가기](https://www.codewars.com/)
+### 7kyu
+
+- [Sum of odd numbers](/docs/code-wars/sum-of-odd-numbers)
+
+### 6kyu
+
+- [Multiples of 3 or 5](/docs/code-wars/multiples-of-3-5)
+
+- [Take a Ten Minute Walk](/docs/code-wars/take-a-ten-minute-walk)
+
+- [Convert string to camel case](/docs/code-wars/convert-string-to-camel-case)
+
+- [Your order, please](/docs/code-wars/your-order-please)
+
+### 5kyu
+
+- [Moving Zeros To The End (5kyu)](/docs/code-wars/moving-zeros-to-the-end)
+
+- [Calculating with Functions (5kyu)](/docs/code-wars/calculating-with-functions)
+
+### 4kyu
+
+- [Human readable duration format (4kyu)](/docs/code-wars/human-readable-duration-format)
