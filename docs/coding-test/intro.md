@@ -27,7 +27,11 @@ sidebar_position: 1
 - [Moving Zeros To The End (5kyu)](/docs/code-wars/moving-zeros-to-the-end)
 
 - [Calculating with Functions (5kyu)](/docs/code-wars/calculating-with-functions)
+-
+- [RGB To Hex Conversion (5kyu)](/docs/code-wars/rgb-to-hex-conversion)
 
 ### 4kyu
 
 - [Human readable duration format (4kyu)](/docs/code-wars/human-readable-duration-format)
+-
+- [Range Extraction (4kyu)](/docs/code-wars/range-extraction)
