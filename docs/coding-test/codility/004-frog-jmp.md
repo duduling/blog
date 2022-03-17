@@ -48,4 +48,4 @@ function solution(X, Y, D) {
 
 ### References
 
-- [Codillity - Odd Occurrences In Array (Lesson 2)](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp)
+- [Codillity - Odd Occurrences In Array (Lesson 3)](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp)
