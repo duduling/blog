@@ -1,4 +1,4 @@
-# FrogRiverOne (Lesson 4)
+# PermCheck (Lesson 4)
 
 ## Instructions
 
@@ -81,4 +81,4 @@ function solution(A) {
 
 ### References
 
-- [Codillity - FrogRiverOne (Lesson 4)](https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one)
+- [Codillity - PermCheck (Lesson 4)](https://app.codility.com/programmers/lessons/4-counting_elements/perm_check)
