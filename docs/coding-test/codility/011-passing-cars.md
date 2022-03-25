@@ -72,4 +72,4 @@ function solution(A) {
 
 ### References
 
-- [Codillity - MissingInteger (Lesson 4)](https://app.codility.com/programmers/lessons/4-counting_elements/missing_integer)
+- [Codillity - PassingCars (Lesson 5)](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars)
