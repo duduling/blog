@@ -1,4 +1,4 @@
-# Distinct (Lesson 5)
+# Distinct (Lesson 6)
 
 ## Instructions
 
@@ -62,4 +62,4 @@ function solution(A) {
 
 ### References
 
-- [Codillity - GenomicRangeQuery (Lesson 5)](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query)
+- [Codillity - GenomicRangeQuery (Lesson 6)](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query)
