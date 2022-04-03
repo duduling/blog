@@ -45,7 +45,7 @@ Write an efficient algorithm for the following assumptions:
 
 ### Translate to Korean
 
-N개의 배열에 각 디스크의 반지름 크기가 주어진다. Index가 원의 중심이 되고 해당 Index에 들어 있는 값이 반지름이 된다.
+N개의 배열에 각 디스크의 반지름 크기가 주어진다. Index가 원의 중심이 되고 해당 Index에 들어 있는 값이 반지름이 된다. 원의 좌표가 다른 원 안에 포함하는 개수를 찾는다.
 
 ```
 ex)
@@ -96,4 +96,4 @@ function solution(A) {
 
 ### References
 
-- [Codillity - MaxProductOfThree (Lesson 6)](https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query)
+- [Codillity - NumberOfDiscIntersections (Lesson 6)](https://app.codility.com/programmers/lessons/6-sorting/number_of_disc_intersections)
