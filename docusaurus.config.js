@@ -21,10 +21,10 @@ const DOCS_OPTIONS = [
   // },
 ];
 
-const TIL_OPTIONS = [
+const POST_OPTIONS = [
   {
-    label: "TIL in 2022",
-    to: "til/2022",
+    label: "POST in 2022",
+    to: "post/2022",
   },
 ];
 
@@ -55,7 +55,7 @@ module.exports = {
         {
           label: "Logs",
           position: "left",
-          items: TIL_OPTIONS,
+          items: POST_OPTIONS,
         },
         {
           label: "GitHub",
@@ -77,8 +77,8 @@ module.exports = {
           items: DOCS_OPTIONS,
         },
         {
-          title: "TIL",
-          items: TIL_OPTIONS,
+          title: "POST",
+          items: POST_OPTIONS,
         },
         {
           title: "Personal Links",
@@ -120,10 +120,10 @@ module.exports = {
     [
       "@docusaurus/plugin-content-blog",
       {
-        id: "tilTwoZeroTwoTwo",
-        path: "./til/2022",
-        routeBasePath: "til/2022",
-        editUrl: "https://github.com/duduling/blog/tree/main/til",
+        id: "postTwoZeroTwoTwo",
+        path: "./post/2022",
+        routeBasePath: "post/2022",
+        editUrl: "https://github.com/duduling/blog/tree/main/post",
       },
     ],
   ],
