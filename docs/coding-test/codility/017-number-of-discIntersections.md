@@ -57,7 +57,7 @@ A[0] = 4
 
 ```js
 function solution(A) {
-  const temp = A.map((radius, idx) => {
+  const sortA = A.map((radius, idx) => {
     return {
       startPoint: idx - radius,
       endPoint: idx + radius,
@@ -68,19 +68,22 @@ function solution(A) {
 
   let answer = 0;
 
-  i: for (let i = 0; i < temp.length; i++) {
-    const { startPoint, endPoint } = temp[i];
+  for (let i = 0, sortALength = sortA.length; i < sortALength; i++) {
+    const { startPoint, endPoint } = sortA[i];
 
-    for (let l = i + 1; l < temp.length; l++) {
-      if (temp[l].startPoint > endPoint) {
-        continue i;
-      }
-      if (startPoint <= temp[l].startPoint && temp[l].startPoint <= endPoint) {
-        answer += 1;
-      }
+    for (let l = i + 1; l < sortALength; l++) {
       if (answer > 10000000) {
-        answer = -1;
-        break i;
+        return -1;
+      }
+
+      const { startPoint: targetStartPoint } = sortA[l];
+
+      if (targetStartPoint > endPoint) {
+        break;
+      }
+
+      if (startPoint <= targetStartPoint && targetStartPoint <= endPoint) {
+        answer += 1;
       }
     }
   }
@@ -88,11 +91,9 @@ function solution(A) {
 }
 ```
 
-## Review
+## Reviewㅇ
 
-`sort`를 해준 뒤 나오는 가장 큰 3개의 값을 곲하면 가장 큰 수가 나온다. (이하 `standardMaxNum`)
-
--> 하지만 음수 2개 + 양수 1개를 했을 경우 `standardMaxNum` 보다 큰 값이 나올 수도 있다.
+좀 코드가 길어서 헷갈리긴 했지만 차근차근 풀어나가면 풀 수 있다. 먼저 원들의 각 끝점들을 구하고 그 중복된 값을 구하지 않기 위해 정렬한다. 그 후에 해당 조건에 맞춰서 하나씩 점검하면 된다.
 
 ### References
 
