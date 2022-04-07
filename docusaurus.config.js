@@ -62,6 +62,11 @@ module.exports = {
           href: "https://github.com/duduling",
           position: "left",
         },
+        {
+          label: "TIL in Notion",
+          href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=48ec8beb2d054f1aaf4ec24825bb0286",
+          position: "left",
+        },
         // {
         //   label: 'Resume',
         //   href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
@@ -87,10 +92,10 @@ module.exports = {
               label: "GitHub",
               href: "https://github.com/duduling",
             },
-            // {
-            //   label: 'Resume',
-            //   href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
-            // },
+            {
+              label: "TIL in Notion",
+              href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=48ec8beb2d054f1aaf4ec24825bb0286",
+            },
           ],
         },
       ],
