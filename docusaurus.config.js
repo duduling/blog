@@ -58,13 +58,13 @@ module.exports = {
           items: POST_OPTIONS,
         },
         {
-          label: "GitHub",
-          href: "https://github.com/duduling",
+          label: "TIL in Notion",
+          href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=48ec8beb2d054f1aaf4ec24825bb0286",
           position: "left",
         },
         {
-          label: "TIL in Notion",
-          href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=48ec8beb2d054f1aaf4ec24825bb0286",
+          label: "GitHub",
+          href: "https://github.com/duduling",
           position: "left",
         },
         // {
@@ -89,12 +89,12 @@ module.exports = {
           title: "Personal Links",
           items: [
             {
-              label: "GitHub",
-              href: "https://github.com/duduling",
-            },
-            {
               label: "TIL in Notion",
               href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=48ec8beb2d054f1aaf4ec24825bb0286",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/duduling",
             },
           ],
         },
