@@ -69,8 +69,6 @@ function solution(S) {
 }
 ```
 
-## Review
-
 ### References
 
 - [Codillity - Brackets (Lesson 7)](https://app.codility.com/programmers/lessons/7-stacks_and_queues/brackets)
