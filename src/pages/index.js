@@ -8,6 +8,7 @@ import HomepageFeatures from "../components/HomepageFeatures";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
@@ -27,8 +28,6 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  // const { siteConfig } = useDocusaurusContext();
-
   return (
     <Layout
       title={`Duduling`}

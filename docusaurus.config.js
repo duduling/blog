@@ -6,18 +6,13 @@ const DOCS_OPTIONS = [
     label: "Coding Test",
     to: "docs/coding-test/intro",
   },
-  {
-    label: "Computer Science",
-    to: "docs/cs/data-structure-algorithm/big-o",
-  },
-  // { to: 'docs/frontend/intro', label: 'Front-End' },
   // {
-  //   label: 'DevOps',
-  //   to: 'docs/devOps/intro',
+  //   label: "Computer Science",
+  //   to: "docs/cs/data-structure-algorithm/big-o",
   // },
   // {
-  //   label: 'ETC',
-  //   to: 'docs/etc/intro',
+  //   label: "Online Lecture",
+  //   to: "docs/online-lecture/intro",
   // },
 ];
 
@@ -67,11 +62,11 @@ module.exports = {
           href: "https://github.com/duduling",
           position: "left",
         },
-        // {
-        //   label: 'Resume',
-        //   href: 'https://duduling.notion.site/Derek-ff75b4ba66ee437bbd576d2d3098f4f4',
-        //   position: 'left',
-        // },
+        {
+          label: "Email",
+          href: "mailto:duduling20@gmail.com",
+          position: "left",
+        },
       ],
     },
     footer: {
@@ -95,6 +90,10 @@ module.exports = {
             {
               label: "GitHub",
               href: "https://github.com/duduling",
+            },
+            {
+              label: "Email",
+              href: "mailto:duduling20@gmail.com",
             },
           ],
         },
