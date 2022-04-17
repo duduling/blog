@@ -54,32 +54,46 @@ Write an efficient algorithm for the following assumptions:
 ## Solution
 
 ```js
-function solution(A, B) {
+function solution(A) {
   let answer = 0;
-  const toUpstreamFishList = [];
+  let rightobj = A.reduce(
+    (acc, cur) => ({
+      ...acc,
+      [cur]: acc[cur] ? acc[cur] + 1 : 1,
+    }),
+    {}
+  );
+  let rightLength = A.length;
 
-  for (let i = 0, listLength = A.length; i < listLength; i++) {
-    const toFolwingFish = B[i];
+  let leftobj = {};
+  let leftLength = 0;
 
-    if (toFolwingFish === 1) {
-      toUpstreamFishList.push(A[i]);
-    } else if (toUpstreamFishList.length === 0) {
+  let leftLeader = 0;
+  let leftCount = 0;
+
+  for (let i = 0; i < A.length; i++) {
+    const cur = A[i];
+
+    rightobj[cur] = rightobj[cur] - 1;
+    rightLength -= 1;
+
+    leftobj[cur] = (leftobj[cur] || 0) + 1;
+    leftLeader += 1;
+
+    if (leftobj[cur] > leftCount) {
+      leftLeader = cur;
+      leftCount = leftobj[cur];
+    }
+
+    if (
+      rightobj[leftLeader] > parseInt(rightLength / 2) &&
+      leftCount > parseInt(leftLength / 2)
+    ) {
       answer += 1;
-    } else {
-      while (toUpstreamFishList.length > 0) {
-        const firstFish = toUpstreamFishList[toUpstreamFishList.length - 1];
-        if (firstFish > A[i]) {
-          break;
-        } else {
-          toUpstreamFishList.pop();
-          if (toUpstreamFishList.length === 0) {
-            answer += 1;
-          }
-        }
-      }
     }
   }
-  return toUpstreamFishList.length + answer;
+
+  return answer;
 }
 ```
 
