@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hidden_comment: true
 ---
 
 # Intro

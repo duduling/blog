@@ -52,6 +52,7 @@ function DocItemContent(props) {
     toc_min_heading_level: tocMinHeadingLevel,
     toc_max_heading_level: tocMaxHeadingLevel,
     slug: identifier,
+    hidden_comment: hiddenComment,
   } = frontMatter;
   const { title, permalink } = metadata; // We only add a title if:
   // - user asks to hide it with front matter
@@ -103,16 +104,18 @@ function DocItemContent(props) {
               </MDXContent>
             </div>
 
-            <article style={{ marginTop: "4em" }}>
-              <DiscussionEmbed
-                shortname="duduling-blog"
-                config={{
-                  url: `https://duduling.dev${permalink}`,
-                  identifier,
-                  title: `${title}`,
-                }}
-              />
-            </article>
+            {!hiddenComment && (
+              <article style={{ marginTop: "4em" }}>
+                <DiscussionEmbed
+                  shortname="duduling-blog"
+                  config={{
+                    url: `https://duduling.dev${permalink}`,
+                    identifier,
+                    title: `${title}`,
+                  }}
+                />
+              </article>
+            )}
 
             <DocItemFooter {...props} />
           </article>
