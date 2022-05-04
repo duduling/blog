@@ -40,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/plugin-content-blog": "^2.0.0-beta.8"
+    "@docusaurus/plugin-content-blog": "^2.0.0-beta.18"
   }
 }
