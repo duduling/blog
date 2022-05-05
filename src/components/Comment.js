@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 
-const UTTERANCES_NAME = ".utterances-frame";
-
 function Comment() {
   const containerRef = useRef(null);
   const { colorMode } = useColorMode();
@@ -23,8 +21,9 @@ function Comment() {
     })();
   }, []);
 
+  // #region - 현재 테마에 따른 utterances 테마 변경
   useEffect(() => {
-    const utterancesFrameEl = document.querySelector(UTTERANCES_NAME);
+    const utterancesFrameEl = document.querySelector(".utterances-frame");
 
     if (utterancesFrameEl) {
       utterancesFrameEl.src = utterancesFrameEl.src.replace(
@@ -33,6 +32,7 @@ function Comment() {
       );
     }
   }, [colorMode]);
+  // #endregion
 
   return <div ref={containerRef} />;
 }
