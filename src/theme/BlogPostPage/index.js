@@ -15,7 +15,7 @@ import {
 } from "@docusaurus/theme-common";
 import TOC from "@theme/TOC";
 import clsx from "clsx";
-import { DiscussionEmbed } from "disqus-react";
+import Comment from "/src/components/Comment";
 
 function BlogPostPageMetadata(props) {
   const { content: BlogPostContents } = props;
@@ -87,16 +87,7 @@ function BlogPostPageContent(props) {
         <BlogPostContents />
       </BlogPostItem>
 
-      <article style={{ marginTop: "4em" }}>
-        <DiscussionEmbed
-          shortname="duduling-blog"
-          config={{
-            url: `https://duduling.dev${permalink}`,
-            identifier,
-            title: `${title}`,
-          }}
-        />
-      </article>
+      <Comment />
 
       {(nextItem || prevItem) && (
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />

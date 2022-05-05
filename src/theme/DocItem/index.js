@@ -22,7 +22,7 @@ import {
 } from "@docusaurus/theme-common";
 import DocBreadcrumbs from "@theme/DocBreadcrumbs";
 import MDXContent from "@theme/MDXContent";
-import { DiscussionEmbed } from "disqus-react";
+import Comment from "/src/components/Comment";
 
 function DocItemMetadata(props) {
   const { content: DocContent } = props;
@@ -104,18 +104,7 @@ function DocItemContent(props) {
               </MDXContent>
             </div>
 
-            {!hiddenComment && (
-              <article style={{ marginTop: "4em" }}>
-                <DiscussionEmbed
-                  shortname="duduling-blog"
-                  config={{
-                    url: `https://duduling.dev${permalink}`,
-                    identifier,
-                    title: `${title}`,
-                  }}
-                />
-              </article>
-            )}
+            {!hiddenComment && <Comment />}
 
             <DocItemFooter {...props} />
           </article>
