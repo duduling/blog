@@ -54,7 +54,7 @@ module.exports = {
         },
         {
           label: "TIL in Notion",
-          href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=48ec8beb2d054f1aaf4ec24825bb0286",
+          href: "https://til.duduling.dev",
           position: "left",
         },
         {
@@ -85,7 +85,7 @@ module.exports = {
           items: [
             {
               label: "TIL in Notion",
-              href: "https://duduling.notion.site/f4817fcbd97b4c41961127588c0b17d8?v=31f8ddbbbd0c48d79acb32018d4a86db",
+              href: "https://til.duduling.dev",
             },
             {
               label: "GitHub",
