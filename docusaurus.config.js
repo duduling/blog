@@ -98,7 +98,7 @@ module.exports = {
       title: "Let's Duduling",
       logo: {
         alt: "Duduling Logo",
-        src: "img/open_graph_image.png",
+        src: "img/favicon.ico",
       },
       items: [
         {
