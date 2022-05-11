@@ -10,17 +10,17 @@ const FeatureList = [
   {
     cover: "👨🏻‍💻",
     title: "Develop For Business",
-    description: <>Not Ready</>,
+    description: <>Not Yet</>,
   },
   {
     cover: "👨‍👩‍👧‍👦",
     title: "Value of Together",
-    description: <>Not Ready</>,
+    description: <>Not Yet</>,
   },
   {
     cover: "🏃🏻‍♂️",
     title: "No Pain, No Gain",
-    description: <>Not Ready</>,
+    description: <>Not Yet</>,
   },
 ];
 
