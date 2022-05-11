@@ -35,6 +35,65 @@ module.exports = {
   organizationName: "Duduling", // Usually your GitHub org/user name.
   projectName: "blog", // Usually your repo name.
   themeConfig: {
+    metadata: [
+      {
+        name: "title",
+        content: "Let's Duduling",
+      },
+      {
+        name: "description",
+        content:
+          "프론트엔드 개발자 Duduling 입니다. 크고 작은 문제들의 대한 포스팅과 코딩 테스트를 기록하기 위해 틈틈히 작성하는 공간입니다.",
+      },
+      {
+        name: "keywords",
+        content: "docusaurus, front-dev, front, blog, dev, 프론트, 개발자",
+      },
+      // Meta Tag for Web
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://duduling.dev",
+      },
+      {
+        property: "og:title",
+        content: "Let's Duduling",
+      },
+      {
+        property: "og:description",
+        content:
+          "프론트엔드 개발자 Duduling 입니다. 크고 작은 문제들의 대한 포스팅과 코딩 테스트를 기록하기 위해 틈틈히 작성하는 공간입니다.",
+      },
+      {
+        property: "og:image",
+        content: "img/logo.svg",
+      },
+      // Meta Tag for Twitter
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        property: "twitter:url",
+        content: "https://duduling.dev",
+      },
+      {
+        property: "twitter:title",
+        content: "Let's Duduling",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "프론트엔드 개발자 Duduling 입니다. 크고 작은 문제들의 대한 포스팅과 코딩 테스트를 기록하기 위해 틈틈히 작성하는 공간입니다.",
+      },
+      {
+        property: "twitter:image",
+        content: "img/logo.svg",
+      },
+    ],
     navbar: {
       title: "Let's Duduling",
       logo: {
