@@ -69,7 +69,7 @@ module.exports = {
       },
       {
         property: "og:image",
-        content: "img/duduling_profile.png",
+        content: "img/open_graph_image.png",
       },
       // Meta Tag for Twitter
       {
@@ -91,14 +91,14 @@ module.exports = {
       },
       {
         property: "twitter:image",
-        content: "img/duduling_profile.png",
+        content: "img/open_graph_image.png",
       },
     ],
     navbar: {
       title: "Let's Duduling",
       logo: {
         alt: "Duduling Logo",
-        src: "img/duduling_profile.png",
+        src: "img/open_graph_image.png",
       },
       items: [
         {
