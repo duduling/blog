@@ -34,6 +34,16 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "Duduling", // Usually your GitHub org/user name.
   projectName: "blog", // Usually your repo name.
+  scripts: [
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=G-DZG5X3LG5P",
+      async: true,
+    },
+    {
+      src: "/js/googleAnalytics.js",
+      async: true,
+    },
+  ],
   themeConfig: {
     metadata: [
       {
@@ -176,10 +186,10 @@ module.exports = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        googleAnalytics: {
-          trackingID: "G-DZG5X3LG5P",
-          anonymizeIP: true,
-        },
+        // googleAnalytics: {
+        //   trackingID: "G-DZG5X3LG5P",
+        //   anonymizeIP: true,
+        // },
       },
     ],
   ],
