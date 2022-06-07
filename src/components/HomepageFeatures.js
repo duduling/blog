@@ -19,7 +19,7 @@ const FeatureList = [
   },
   {
     cover: "🏃🏻‍♂️",
-    title: "No Pain, No Gain",
+    title: "Series of Choices",
     description: <>Not Yet</>,
   },
 ];

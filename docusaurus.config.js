@@ -57,7 +57,8 @@ module.exports = {
       },
       {
         name: "keywords",
-        content: "docusaurus, front-dev, front, blog, dev, 프론트, 개발자",
+        content:
+          "Duduling, duduling, duduling blog, dudu, derek, docusaurus, front-dev, front, blog, dev, 프론트, 개발자",
       },
       // Meta Tag for Web
       {
