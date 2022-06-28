@@ -40,5 +40,6 @@
   },
   "devDependencies": {
     "@docusaurus/plugin-content-blog": "^2.0.0-beta.19"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
