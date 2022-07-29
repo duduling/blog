@@ -1,4 +1,9 @@
-# index
+---
+sidebar_position: 1
+hidden_comment: true
+---
+
+# Intro
 
 엔지니어는 도구를 이용하는 것이지 매몰되면 안 된다.
 
