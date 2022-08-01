@@ -21,8 +21,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # Yarn Berry with Zero-Installs
+.pnp.*
 .yarn/*
+<<<<<<< HEAD
 !.yarn/cache
+=======
+>>>>>>> 1ad1b6c... chore: Clear .cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
