@@ -139,6 +139,15 @@ module.exports = {
         },
       ],
     },
+    colorMode: {
+      defaultMode: "dark",
+    },
+    algolia: {
+      indexName: "blog",
+      appId: "Q1DJWSUVZO",
+      apiKey: "4b1a8365d572b2485e823b1d4a9f017c",
+      contextualSearch: true,
+    },
     footer: {
       style: "dark",
       links: [
