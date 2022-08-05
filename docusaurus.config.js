@@ -27,7 +27,7 @@ const POST_OPTIONS = [
 module.exports = {
   title: "Let's Duduling",
   tagline: "Between Googling And Doodle",
-  url: "https://blog-duduling.vercel.app",
+  url: "https://duduling.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -145,7 +145,7 @@ module.exports = {
     algolia: {
       indexName: "blog",
       appId: "Q1DJWSUVZO",
-      apiKey: "4b1a8365d572b2485e823b1d4a9f017c",
+      apiKey: "bd6ce8dfaf1ccc04e945639abb88abf5",
       contextualSearch: true,
     },
     footer: {
