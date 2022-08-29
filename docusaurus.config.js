@@ -7,13 +7,9 @@ const DOCS_OPTIONS = [
     to: "docs/coding-test/intro",
   },
   // {
-  //   label: "Computer Science",
-  //   to: "docs/cs/data-structure-algorithm/big-o",
+  //   label: "Online Lecture",
+  //   to: "docs/online-lecture/intro",
   // },
-  {
-    label: "Online Lecture",
-    to: "docs/online-lecture/intro",
-  },
 ];
 
 const POST_OPTIONS = [
