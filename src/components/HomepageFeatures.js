@@ -10,17 +10,35 @@ const FeatureList = [
   {
     cover: "👨🏻‍💻",
     title: "Develop For Business",
-    description: <>Not Yet</>,
+    description: (
+      <div>
+        개발자 이전에 서비스의 일원으로 <br />
+        개발을 위한 개발보다 <br />
+        서비스를 위한 개발을 좋아합니다.
+      </div>
+    ),
   },
   {
     cover: "👨‍👩‍👧‍👦",
     title: "Value of Together",
-    description: <>Not Yet</>,
+    description: (
+      <div>
+        혼자 스타플레이어가 되는 것보다 <br />
+        함께 문제를 고민하고 해결하며 <br />
+        성장할 때 즐거움을 느낍니다.
+      </div>
+    ),
   },
   {
     cover: "🏃🏻‍♂️",
-    title: "Series of Choices",
-    description: <>Not Yet</>,
+    title: "Steady Growth",
+    description: (
+      <div>
+        잠깐의 열정보다 지속하는 것이 <br />
+        더 중요하다고 느끼며 <br />
+        성장의 지속성을 위해 노력합니다.
+      </div>
+    ),
   },
 ];
 
