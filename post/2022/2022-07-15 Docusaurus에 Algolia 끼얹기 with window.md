@@ -18,6 +18,8 @@ tags: [Window, Blog, Setting, ETC]
 
 자 일단 Docusaurus에 검색 기능인 Algolia를 추가 해보도록 하자!! (인터넷에 Mac 기준은 너무 많아서 Window 기준으로 포스팅 해봤다.)
 
+<!--truncate-->
+
 ## Contents
 
 ### Algolia란?

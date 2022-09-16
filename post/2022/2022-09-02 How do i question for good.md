@@ -12,9 +12,9 @@ tags: [Comumnication, Dev-Culture, ETC]
 
 ## 내가 제일 많이 하는 일
 
-![🤔](https://til.duduling.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F02d00cbf-0863-4bb7-8db5-1bd287a464ee%2FUntitled.png?table=block&id=c158a33f-af49-4400-a2d2-47849bbc3b4e&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=2000&userId=&cache=v2)
-
 개발자는 회사에서 코딩을 압도적으로 많이 할까? 물론 그럴 때도 있지만 항상 그런 것은 아니다. 어떤 날은 문서 정리하는데 시간을 보내는 날도 있고 어떤 날은 오전 내내 연달아 회의만 하는 경우도 있다. 그 때 가장 강력하고 효과적인 능력을 발휘하는 것이 바로 `Communication`이다. 나는 전 회사가 첫 회사이기에 협업하는 문화가 처음이었다. 😂 나는 모든 일을 혼자서 해 내는 슈퍼 플레이어가 아니었기에 함께 소통하고 더욱 효과적이게 나의 문제와 해결책을 공유하고 상대방의 문제를 파악해 서포트 해줘야했다. 그 때의 나의 사수님이 `How do i ask a good question?`의 제목의 링크를 보내주면서 이야기했었다.
+
+<!--truncate-->
 
 > "혹시 이 링크 읽어보시고 나중에 기회가 될 때 같이 발표를 통해 같이 공유할 수 있으면 좋을 것 같아요!"
 

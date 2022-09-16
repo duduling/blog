@@ -15,6 +15,8 @@ author_image_url: https://avatars.githubusercontent.com/u/60775011?v=4
 
 `Universal Analytics`가 아닌 `Analytics 4`가 나온지 꽤 됐지만 적용을 못 했었는데 이번 기회에 적용하게 되었다.근데 막상 붙이고 보니 기능이 많은 것 같은데 아직 디테일 한 컨트롤 보다는 연결에 의의를 두고 진행했다. 크게 다른 점은 세션 방식의 추적에서 이벤트 방식의 추적으로 바꼈다는 것이다. 자세한 내용은 [_Universal Analytics versus Google Analytics 4 data_](https://support.google.com/analytics/answer/9964640?hl=en#zippy=%2Cin-this-article) 에서 확인하면 된다.
 
+<!--truncate-->
+
 # Contents
 
 Google Analytics4로 새롭게 업데이트 되면서 태그 방식도 바꼈다.

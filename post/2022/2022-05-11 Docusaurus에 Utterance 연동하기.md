@@ -14,6 +14,8 @@ tags: [Blog, Front-end, ETC]
 
 원래 기존에는 `Utterance`가 UI 적으로 이쁘기도 하고 사용하고 싶었지만 Repository를 공개로 해야 한다는 부분 때문에 `Disqus`를 사용하려고 했다. 하지만 `Algoria`를 사용하려면 어차피 Repository를 Public으로 해야 하기에 다시 `Utterance`로 연동했다. 그냥 연동하면 될 것 같았는데 중간에 생긴 작은 문제 몇 가지가 있어서 다른 분들에게 도움을 주기 위해 포스팅한다.
 
+<!--truncate-->
+
 ## Utterance
 
 먼저 `Utterances`는 GitHub Issue 기반으로 댓글을 작성하는 방식이다.

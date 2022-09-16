@@ -14,6 +14,8 @@ tags: [DevOps, CloudFlare, Notion, ETC]
 
 Domain이 있어서 블로그 도메인과 통합할 생각으로 노션 페이지에 서브 도메인을 연결하다가 기록한 내용이다.
 
+<!--truncate-->
+
 ## Contents
 
 ### Notion Page 공유
