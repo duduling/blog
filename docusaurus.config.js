@@ -12,13 +12,6 @@ const DOCS_OPTIONS = [
   // },
 ];
 
-const POST_OPTIONS = [
-  {
-    label: "POST in 2022",
-    to: "post/2022",
-  },
-];
-
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Let's Duduling",
@@ -114,24 +107,26 @@ module.exports = {
           items: DOCS_OPTIONS,
         },
         {
-          label: "Logs",
+          to: "/post",
+          label: "Post",
           position: "left",
-          items: POST_OPTIONS,
         },
+        { to: "/post/archive", label: "Archive", position: "left" },
+        { to: "/post/tags", label: "Tags", position: "left" },
         {
           label: "TIL in Notion",
           href: "https://til.duduling.dev",
-          position: "left",
+          position: "right",
         },
         {
           label: "GitHub",
           href: "https://github.com/duduling",
-          position: "left",
+          position: "right",
         },
         {
           label: "Email",
           href: "mailto:duduling20@gmail.com",
-          position: "left",
+          position: "right",
         },
       ],
     },
@@ -152,8 +147,12 @@ module.exports = {
           items: DOCS_OPTIONS,
         },
         {
-          title: "POST",
-          items: POST_OPTIONS,
+          title: "Logs",
+          items: [
+            { label: "Post", to: "/post" },
+            { label: "Archive", to: "/post/archive" },
+            { label: "Tags", to: "/post/tags" },
+          ],
         },
         {
           title: "Personal Links",
@@ -204,8 +203,8 @@ module.exports = {
       "@docusaurus/plugin-content-blog",
       {
         id: "postTwoZeroTwoTwo",
-        path: "./post/2022",
-        routeBasePath: "post/2022",
+        path: "./post",
+        routeBasePath: "post",
         editUrl: "https://github.com/duduling/blog/tree/main/post",
       },
     ],
