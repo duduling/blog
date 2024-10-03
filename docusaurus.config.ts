@@ -1,135 +1,202 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import type * as Preset from "@docusaurus/preset-classic";
+import type { Config } from "@docusaurus/types";
+import { themes as prismThemes } from "prism-react-renderer";
+
+const TEXT_CONFIG = {
+  title: "Let's Duduling",
+  description:
+    "프론트엔드 개발자 Duduling 입니다. 크고 작은 문제들에 대한 포스팅과 각종 정보를 기록하기 위해 틈틈이 작성하는 공간입니다.",
+} as const;
+
+const DOCS_OPTIONS = [
+  {
+    label: "Book",
+    to: "wiki/book/intro",
+  },
+  {
+    label: "Coding Test",
+    to: "wiki/coding-test/intro",
+  },
+  {
+    label: "Online Lecture",
+    to: "wiki/online-lecture/intro",
+  },
+];
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: TEXT_CONFIG.title,
+  tagline: "Dinosaurs are cool",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://duduling.dev",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: "facebook", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: "/wiki",
+          sidebarPath: "./sidebars.ts",
         },
         blog: {
-          showReadingTime: true,
+          routeBasePath: "/",
+          showReadingTime: false,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
+    metadata: [
+      {
+        name: "title",
+        content: TEXT_CONFIG.title,
+      },
+      {
+        name: "description",
+        content: TEXT_CONFIG.description,
+      },
+      {
+        name: "keywords",
+        content:
+          "Duduling, duduling, duduling blog, dudu, derek, docusaurus, front-dev, front, blog, dev, 프론트, 개발자",
+      },
+      // Meta Tag for Web
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://duduling.dev",
+      },
+      {
+        property: "og:title",
+        content: TEXT_CONFIG.title,
+      },
+      {
+        property: "og:description",
+        content: TEXT_CONFIG.description,
+      },
+      {
+        property: "og:image",
+        content: "img/open_graph_image.png",
+      },
+      // Meta Tag for Twitter
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        property: "twitter:url",
+        content: "https://duduling.dev",
+      },
+      {
+        property: "twitter:title",
+        content: TEXT_CONFIG.title,
+      },
+      {
+        property: "twitter:description",
+        content: TEXT_CONFIG.description,
+      },
+      {
+        property: "twitter:image",
+        content: "img/open_graph_image.png",
+      },
+    ],
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: 'My Site',
+      title: "Let's Duduling",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "Duduling Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Wiki",
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: "/archive", label: "Archive", position: "left" },
+        { to: "/tags", label: "Tags", position: "left" },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          label: "TIL in Notion",
+          href: "https://til.duduling.dev",
+          position: "right",
+        },
+        {
+          href: "https://github.com/duduling",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Widi",
+          items: DOCS_OPTIONS,
+        },
+        {
+          title: "Logs",
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            { label: "Post", to: "/post" },
+            { label: "Archive", to: "/post/archive" },
+            { label: "Tags", to: "/post/tags" },
           ],
         },
         {
-          title: 'Community',
+          title: "Personal Links",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "TIL in Notion",
+              href: "https://til.duduling.dev",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: "GitHub",
+              href: "https://github.com/duduling",
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: "Email",
+              href: "mailto:duduling20@gmail.com",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Duduling, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
