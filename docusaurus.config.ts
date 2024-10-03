@@ -98,7 +98,7 @@ const config: Config = {
       },
       {
         property: "og:url",
-        content: "https://duduling.dev",
+        content: "https://blog.duduling.dev",
       },
       {
         property: "og:title",
@@ -119,7 +119,7 @@ const config: Config = {
       },
       {
         property: "twitter:url",
-        content: "https://duduling.dev",
+        content: "https://blog.duduling.dev",
       },
       {
         property: "twitter:title",
