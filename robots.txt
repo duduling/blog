@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duduling.dev/sitemap.xml
