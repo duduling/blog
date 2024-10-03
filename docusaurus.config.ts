@@ -162,6 +162,7 @@ const config: Config = {
           position: "right",
         },
       ],
+      hideOnScroll: false,
     },
     footer: {
       style: "dark",
@@ -173,9 +174,9 @@ const config: Config = {
         {
           title: "Logs",
           items: [
-            { label: "Post", to: "/post" },
-            { label: "Archive", to: "/post/archive" },
-            { label: "Tags", to: "/post/tags" },
+            { label: "Post", to: "/" },
+            { label: "Archive", to: "/archive" },
+            { label: "Tags", to: "/tags" },
           ],
         },
         {
@@ -196,11 +197,13 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Duduling, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 2022 Duduling, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: [],
+      magicComments: [],
     },
   } satisfies Preset.ThemeConfig,
 };
