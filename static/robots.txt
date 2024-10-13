@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+# Algolia-Crawler-Verif: 0F0326F86C6E5BB9
+
 Sitemap: https://blog.duduling.dev/sitemap.xml
