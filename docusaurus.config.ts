@@ -209,6 +209,15 @@ const config: Config = {
       additionalLanguages: [],
       magicComments: [],
     },
+    algolia: {
+      appId: "0LL6ZKO2WI",
+      apiKey: "d4fc247fae7a35c9f64ccbbe17693f88",
+      indexName: "blog",
+      contextualSearch: true,
+      searchPagePath: "search",
+      insights: false,
+      searchParameters: {},
+    },
   } satisfies Preset.ThemeConfig,
 };
 
