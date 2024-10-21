@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
@@ -208,6 +210,15 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: [],
       magicComments: [],
+    },
+    algolia: {
+      appId: "0LL6ZKO2WI",
+      apiKey: process.env.ALGOLIA_API_KEY,
+      indexName: "blog",
+      contextualSearch: true,
+      searchPagePath: "search",
+      insights: false,
+      searchParameters: {},
     },
   } satisfies Preset.ThemeConfig,
 };
