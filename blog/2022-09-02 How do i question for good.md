@@ -1,6 +1,6 @@
 ---
 slug: how-do-i-ask-a-good-question
-title: "How do I ask a good question?"
+title: 'How do I ask a good question?'
 author: Duduling
 author_title: Front-end Web Developer
 author_url: https://github.com/duduling
@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/60775011?v=4
 tags: [Comumnication, Dev-Culture, ETC]
 ---
 
-![Cover](https://til.duduling.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5344fcf5-b0cc-4f7d-a1ff-89ffd07dfd4f%2FUntitled.png?table=block&id=dd66b16f-2d0a-4036-82c8-cb17e0c071ad&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=2000&userId=&cache=v2)
+![Cover](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5344fcf5-b0cc-4f7d-a1ff-89ffd07dfd4f%2FUntitled.png?table=block&id=dd66b16f-2d0a-4036-82c8-cb17e0c071ad&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=2000&userId=&cache=v2)
 
 ## 내가 제일 많이 하는 일
 
@@ -18,7 +18,7 @@ tags: [Comumnication, Dev-Culture, ETC]
 
 > "혹시 이 링크 읽어보시고 나중에 기회가 될 때 같이 발표를 통해 같이 공유할 수 있으면 좋을 것 같아요!"
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe6d743e7-2a60-4a89-8e8d-d90e870f3451%2FUntitled.png?table=block&id=5adf4daf-edb6-418e-9025-cb9738e6e5eb&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1060&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe6d743e7-2a60-4a89-8e8d-d90e870f3451%2FUntitled.png?table=block&id=5adf4daf-edb6-418e-9025-cb9738e6e5eb&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1060&userId=&cache=v2)
 
 아는 분도 있고 모르는 분은 를 들어가 보면 알겠지만 원래 이 글의 주제는 **Stack OverFlow에 질문하는 방법**에 대한 내용이다.
 

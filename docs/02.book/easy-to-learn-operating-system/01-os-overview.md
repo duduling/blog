@@ -27,14 +27,14 @@
 
 #### 1-3. 컴퓨터 구조와 운영체제
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2Ff6e1f295-1bc6-43d1-b9e0-870ec9b63447%2FUntitled.png?table=block&id=291abafc-9810-4991-85e4-a1809ea7d5d9&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2Ff6e1f295-1bc6-43d1-b9e0-870ec9b63447%2FUntitled.png?table=block&id=291abafc-9810-4991-85e4-a1809ea7d5d9&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - UI(User Interface) - 사용자가 조작하여 컴퓨터를 컨트롤 함
 - GUI(Graphical User Interface) - 마우스의 클릭, 드래그 같은 직관적인 작업으로 컴퓨터 컨트롤이 가능해짐
 
 #### 1-4. 운영체제의 역할
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2Fb5089451-b7d2-4960-9bff-806478840b62%2FUntitled.png?table=block&id=dc53935d-1e71-4a4d-b4c6-7b5d034ebad1&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2Fb5089451-b7d2-4960-9bff-806478840b62%2FUntitled.png?table=block&id=dc53935d-1e71-4a4d-b4c6-7b5d034ebad1&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - 자원 관리 - 자원들의 배분과 적절한 시점에 회수하여 여러 응용 프로그램의 원할한 작업을 돕는다.
 - 자원 보호 - 특정 응용 프로그램이 남의 영역을 침범할 때 해당 자원을 보호 함
@@ -50,7 +50,7 @@
 
 ## 2. 운영체제의 발전
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F21242728-80fe-424f-b9a8-e97c59641542%2FUntitled.png?table=block&id=6327ba3d-56a0-4b22-a3b3-29494c1f3700&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F21242728-80fe-424f-b9a8-e97c59641542%2FUntitled.png?table=block&id=6327ba3d-56a0-4b22-a3b3-29494c1f3700&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 ### 2-1. 초창기 컴퓨터
 
@@ -133,7 +133,7 @@
 
 ### 3-1. 커널과 인터페이스
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F32923689-3441-4cb6-a729-0502f93293e1%2FUntitled.png?table=block&id=7ff19d8e-c6b3-4271-b52a-11c806f27240&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F32923689-3441-4cb6-a729-0502f93293e1%2FUntitled.png?table=block&id=7ff19d8e-c6b3-4271-b52a-11c806f27240&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - 운영체제는 커널과 인터페이스로 분리되어 있다.
   → 같은 커널 다른 인터페이스 ⇒ 다른 운영체제 - 커널 - 프로세스 관리, 메모리 관리, 저장장치 관리 등 운영체제의 핵심 기능을 구현한 프로그램이다. - 인터페이스 - 사용자와 응용 프로그램에 인접하여 커널에 명령을 전달하고 싱행 결과를 사용자와 응용 프로그램에 돌려준다.
@@ -156,7 +156,7 @@
 
 ### 3-3. 커널의 역할과 종류
 
-![스크린샷 2024-04-29 오후 8.40.25.png](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F3723ab3e-c70b-4748-a546-09e26c071db3%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-29_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.40.25.png?table=block&id=498179d4-8537-4bec-a8cb-f68e210a9e7f&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![스크린샷 2024-04-29 오후 8.40.25.png](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F3723ab3e-c70b-4748-a546-09e26c071db3%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-29_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.40.25.png?table=block&id=498179d4-8537-4bec-a8cb-f68e210a9e7f&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - 단일형 구조 커널
   - 단일형 구조(Monolithic Architecture) 커널은 초창기 운영체제의 구조이다.
@@ -169,14 +169,14 @@
     - 수정이 어려워 다양한 환경 시스템에 적용이 어렵다.
     - 현대의 운영체제는 크고 복잡해 단일형 구조의 OS를 구현하기 어렵다.
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F24a24bff-bc2d-42fd-9ba7-0ee085d2f1d8%2FUntitled.png?table=block&id=628f081b-f875-47f3-9879-e826a939a2c5&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F24a24bff-bc2d-42fd-9ba7-0ee085d2f1d8%2FUntitled.png?table=block&id=628f081b-f875-47f3-9879-e826a939a2c5&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - 계층형 구조 커널
   - 단일형 구조 커널이 발전된 형태로 비슷한 기능을 가진 모듈을 묶어서 하나의 계층으로 만들고 계층간의 통신을 통해 운영체제를 구현하는 방식이다.
   - 비슷한 기능을 모아 모듈화 했기에 버그나 오류가 발생하면 계층별로 나눠져 있기에 쉽게 처리할 수 있다.
   - 오늘 날의 대부분의 OS는 해당 구조로 이루어져 있다.
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F0ee4b400-3568-4b25-b8a8-a5f4704a1de0%2FUntitled.png?table=block&id=cc0bbdf4-4960-4194-95a8-278983fd00da&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2F0ee4b400-3568-4b25-b8a8-a5f4704a1de0%2FUntitled.png?table=block&id=cc0bbdf4-4960-4194-95a8-278983fd00da&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - 마이크로 구조 커널
   - 커널의 크기가 계속 커져 방대해진 문제를 해결하기 위해 계층형 구조의 접근 방식과 반대되는 접근 방식으로 개발된 것이 마이크로 구조 커널이다.
@@ -185,7 +185,7 @@
   - 각 모듈의 독립적으로 작동해 하나의 모듈의 실패해도 전체 운영체제가 멈추지 않는다.
   - 대표적인 운영체제인 마하(Mach)는 OS X(애플의 PC OS), IOS(Iphone OS)
 
-![Untitled](https://til.duduling.dev/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2Fd678a41c-46bb-416a-9b9b-ade5c4d08b7b%2FUntitled.png?table=block&id=3cac0848-e71b-41bc-8e42-ef64dd6ddf15&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
+![Untitled](https://duduling.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce%2Fd678a41c-46bb-416a-9b9b-ade5c4d08b7b%2FUntitled.png?table=block&id=3cac0848-e71b-41bc-8e42-ef64dd6ddf15&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1310&userId=&cache=v2)
 
 - 가상머신
   - 운영체제와 응용 프로그램 사이에서 작동하는 프로그램이다.

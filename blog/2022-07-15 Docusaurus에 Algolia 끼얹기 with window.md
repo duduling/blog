@@ -1,6 +1,6 @@
 ---
 slug: docusaurus-algolia
-title: "[Window] Docusaurus에 Algolia 끼얹기 with Window"
+title: '[Window] Docusaurus에 Algolia 끼얹기 with Window'
 author: Duduling
 author_title: Front-end Web Developer
 author_url: https://github.com/duduling
@@ -10,7 +10,7 @@ tags: [Window, Blog, Setting, ETC]
 
 # [Window] Docusaurus에 Algolia 끼얹기 with Window
 
-![Cover](https://til.duduling.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8888736b-4a5e-4a79-a067-faae34688a6a%2FUntitled.png?table=block&id=5332ca67-642c-4424-a863-2878dff2ecb6&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1920&userId=&cache=v2)
+![Cover](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8888736b-4a5e-4a79-a067-faae34688a6a%2FUntitled.png?table=block&id=5332ca67-642c-4424-a863-2878dff2ecb6&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1920&userId=&cache=v2)
 
 ## Intro
 
@@ -38,13 +38,13 @@ Algolia Docsearch 수동 크롤링 공식 문서
 
 1. [Algolia](https://www.algolia.com/)에 가입을 한다.
 
-   ![Algolia - Sign Up](https://til.duduling.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9364e7a6-ee05-478d-b0e8-3e8a2c56c788%2FUntitled.png?table=block&id=fc7f5fa1-e3d5-4b4e-a136-e668c083c92b&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1920&userId=&cache=v2)
+   ![Algolia - Sign Up](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9364e7a6-ee05-478d-b0e8-3e8a2c56c788%2FUntitled.png?table=block&id=fc7f5fa1-e3d5-4b4e-a136-e668c083c92b&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1920&userId=&cache=v2)
 
    > 왼쪽 위에 Create Application을 해준다.
 
 2. `NAME YOUR APPLICATION` 을 입력하고 `FREE` 를 선택해 생성한다.
 
-   ![Creat Apllication](https://til.duduling.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd65a8e76-6faf-4091-aa54-6d24fdbbd5f2%2FUntitled.png?table=block&id=3765b6ad-61fb-41e9-a98f-93711ea2062d&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1920&userId=&cache=v2)
+   ![Creat Apllication](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd65a8e76-6faf-4091-aa54-6d24fdbbd5f2%2FUntitled.png?table=block&id=3765b6ad-61fb-41e9-a98f-93711ea2062d&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=1920&userId=&cache=v2)
 
    > Region을 선택 후 다시 Overview 화면으로 가자 데이터는 따로 넣지 않아도 된다.
 
