@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Korean-language personal blog and wiki site ("Let's Duduling") built with **Docusaurus 3.9** (React 19, TypeScript). Uses Yarn 4 (Berry) with PnP as the package manager.
 
-Production URL: https://duduling.dev
+Production URL: https://blog.duduling.dev
 
 ## Commands
 
