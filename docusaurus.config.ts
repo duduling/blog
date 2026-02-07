@@ -215,9 +215,9 @@ const config: Config = {
       magicComments: [],
     },
     algolia: {
-      appId: "0LL6ZKO2WI",
+      appId: process.env.ALGOLIA_APP_ID,
       apiKey: process.env.ALGOLIA_API_KEY,
-      indexName: "blog",
+      indexName: 'blog',
       contextualSearch: true,
       searchPagePath: "search",
       insights: false,
