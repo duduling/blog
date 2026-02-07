@@ -3,10 +3,7 @@ slug: google-analytics-4
 title: '[개발 블로그 만들기 2탄] Docusaurus에 Google Analytics 4 연동하기 (너는 누구냐)'
 tags: [Blog, Front-end, Google Analytics, ETC]
 
-author: Duduling
-author_title: Front-end Web Developer
-author_url: https://github.com/duduling
-author_image_url: https://avatars.githubusercontent.com/u/60775011?v=4
+authors: [duduling]
 ---
 
 ![Thumbnail](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F31bcd817-67d2-426a-af94-651650dab4f7%2FUntitled.png?table=block&id=08f347ab-5457-4d74-9796-38e0a063c980&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=2000&userId=&cache=v2)

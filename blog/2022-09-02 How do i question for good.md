@@ -1,10 +1,7 @@
 ---
 slug: how-do-i-ask-a-good-question
 title: 'How do I ask a good question?'
-author: Duduling
-author_title: Front-end Web Developer
-author_url: https://github.com/duduling
-author_image_url: https://avatars.githubusercontent.com/u/60775011?v=4
+authors: [duduling]
 tags: [Comumnication, Dev-Culture, ETC]
 ---
 

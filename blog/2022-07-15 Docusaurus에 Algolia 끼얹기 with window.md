@@ -1,10 +1,7 @@
 ---
 slug: docusaurus-algolia
 title: '[Window] Docusaurus에 Algolia 끼얹기 with Window'
-author: Duduling
-author_title: Front-end Web Developer
-author_url: https://github.com/duduling
-author_image_url: https://avatars.githubusercontent.com/u/60775011?v=4
+authors: [duduling]
 tags: [Window, Blog, Setting, ETC]
 ---
 

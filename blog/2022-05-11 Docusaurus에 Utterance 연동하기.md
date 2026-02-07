@@ -1,10 +1,7 @@
 ---
 slug: connect-utteranc
 title: "[개발 블로그 만들기 1탄] Docusaurus에 Utterance 연동하기 (댓글이 필요해)"
-author: Duduling
-author_title: Front-end Web Developer
-author_url: https://github.com/duduling
-author_image_url: https://avatars.githubusercontent.com/u/60775011?v=4
+authors: [duduling]
 tags: [Blog, Front-end, ETC]
 ---
 
