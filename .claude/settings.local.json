@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(yarn outdated:*)",
+      "Bash(yarn npm info:*)",
+      "Bash(yarn up:*)",
+      "Bash(yarn add:*)",
+      "Bash(yarn build:*)",
+      "Bash(ls:*)"
     ]
   }
 }
