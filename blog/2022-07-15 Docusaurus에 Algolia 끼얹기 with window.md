@@ -114,7 +114,7 @@ Algolia Docsearch 수동 크롤링 공식 문서
 docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
 ```
 
-:::warningError
+:::warning[Error]
 
 - `cat: The term 'cat' is not recognized as a name of a cmdlet, function, script file, or executable program`
 - `ValueError: CONFIG is not a valid JSON`
