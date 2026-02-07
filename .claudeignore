@@ -1,0 +1,16 @@
+# Dependencies & PnP cache
+.yarn/
+.pnp.*
+yarn.lock
+
+# Build output
+build/
+.docusaurus/
+.cache-loader/
+
+# Static assets (binary)
+static/img/
+
+# Misc
+.DS_Store
+node_modules/
