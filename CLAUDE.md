@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Korean-language personal blog and wiki site ("Let's Duduling") built with **Docusaurus 3.5** (React 18, TypeScript). Uses Yarn 4 (Berry) with PnP as the package manager.
+Korean-language personal blog and wiki site ("Let's Duduling") built with **Docusaurus 3.9** (React 19, TypeScript). Uses Yarn 4 (Berry) with PnP as the package manager.
 
 Production URL: https://duduling.dev
 
@@ -45,3 +45,9 @@ Production URL: https://duduling.dev
 
 - `.env` file holds `ALGOLIA_API_KEY` (loaded via `dotenv/config` in docusaurus config)
 - Google Analytics tracking ID is configured inline in `docusaurus.config.ts`
+
+## Work Conventions
+
+- 태스크 진행 시 커밋을 단계별로 쪼개서 진행할 것
+- 코드 탐색 시 `.yarn/`, `yarn.lock`, `build/`, `static/img/` 등 대용량 파일은 읽지 말 것
+- 블로그 글 관련 작업 시 전체 목록을 읽지 말고 필요한 파일만 타겟팅할 것
