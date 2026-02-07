@@ -48,6 +48,7 @@ Production URL: https://duduling.dev
 
 ## Work Conventions
 
-- 태스크 진행 시 커밋을 단계별로 쪼개서 진행할 것
+- 태스크 진행 시 커밋을 단계별로 쪼개서 진행할 것 (변경 빠짐없이 커밋)
+- 작업이 길어지면 중간에 `/compact` 또는 `/clear`를 적극 활용하여 컨텍스트 정리할 것
 - 코드 탐색 시 `.yarn/`, `yarn.lock`, `build/`, `static/img/` 등 대용량 파일은 읽지 말 것
 - 블로그 글 관련 작업 시 전체 목록을 읽지 말고 필요한 파일만 타겟팅할 것
