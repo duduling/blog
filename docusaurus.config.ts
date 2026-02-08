@@ -218,7 +218,7 @@ const config: Config = {
       appId: process.env.ALGOLIA_APP_ID,
       apiKey: process.env.ALGOLIA_API_KEY,
       indexName: 'blog',
-      contextualSearch: true,
+      contextualSearch: false,
       searchPagePath: "search",
       insights: false,
       searchParameters: {},
