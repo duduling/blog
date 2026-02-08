@@ -2,7 +2,7 @@
 slug: how-do-i-ask-a-good-question
 title: 'How do I ask a good question?'
 authors: [duduling]
-tags: [Comumnication, Dev-Culture, ETC]
+tags: [Communication, Dev-Culture, ETC]
 ---
 
 ![Cover](https://duduling.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5344fcf5-b0cc-4f7d-a1ff-89ffd07dfd4f%2FUntitled.png?table=block&id=dd66b16f-2d0a-4036-82c8-cb17e0c071ad&spaceId=8259e9c1-b7e6-4ae4-9d6b-d6e45ea177ce&width=2000&userId=&cache=v2)
