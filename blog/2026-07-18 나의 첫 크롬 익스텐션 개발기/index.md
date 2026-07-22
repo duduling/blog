@@ -4,7 +4,7 @@ authors: [duduling]
 tags: [Vibe Coding, Chrome Extension]
 ---
 
-![Cover](./cover.webp)
+![Hello Chrome Extension: 나의 첫 크롬 익스텐션 개발기 - cover](./cover.webp)
 
 **해당 프로젝트는 Claude Code를 이용해 제작한 과정 입니다.🤖**
 
@@ -330,4 +330,4 @@ AI 덕분에 매번 귀찮게 복사했던 일들이 해결됐다. 엄청난 퍼
 
 혹시 관심 있는 분들은 한번 사용해보시고 피드백을 주시면 겸손하게 배우는 마음으로 검토하고 업데이트 하겠습니다!
 
-![Chrome Extension - Picky Data](https://chromewebstore.google.com/detail/fhmdmdbneogkofoillfbkidhbcgibacb?utm_source=item-share-cb)
+https://chromewebstore.google.com/detail/fhmdmdbneogkofoillfbkidhbcgibacb?utm_source=item-share-cb
