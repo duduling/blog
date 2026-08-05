@@ -10,5 +10,9 @@
       "Bash(yarn build:*)",
       "Bash(ls:*)"
     ]
+  },
+  "enabledPlugins": {
+    "playwright@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true
   }
 }
