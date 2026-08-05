@@ -10,11 +10,15 @@ Production URL: https://blog.duduling.dev
 
 ## Commands
 
-- `yarn start` — local dev server with hot reload
+- `yarn dev` — local dev server with hot reload (ko locale, port 3030)
+- `yarn dev:en` — local dev server for the en locale only (port 3031). **Content preview only** — `docusaurus start --locale en` serves the en site at `/`, not `/en/`, so it cannot verify the locale dropdown or cross-locale links.
+- `yarn preview` — production build + `docusaurus serve` (port 3040), serving **all locales at their real paths** (`/`, `/en/`). This is the only local environment that matches production's routing — use it to verify the locale dropdown actually switches languages.
 - `yarn build` — production build to `build/` directory
 - `yarn serve` — serve production build locally
 - `yarn typecheck` — run TypeScript type checking (`tsc`)
 - `yarn clear` — clear Docusaurus cache (useful when builds behave unexpectedly)
+
+**Trap:** `docusaurus start` serves only one locale at a time, and falls back to that locale's `index.html` with **HTTP 200** for any nonexistent path (e.g. `/en/` while running the ko dev server). This looks like a working page but isn't — always verify with `curl -o /dev/null -w '%{http_code}' <url>/some-nonexistent-path` (expect `404`) before trusting a route works, or use `yarn preview` instead.
 
 ## Architecture
 
@@ -27,6 +31,8 @@ Production URL: https://blog.duduling.dev
 ### Content Structure
 
 - `blog/` — Blog posts as Markdown files, named `YYYY-MM-DD title.md` with YAML frontmatter (`slug`, `title`, `author`, `author_title`, `author_url`, `author_image_url`, `tags`). Use `<!--truncate-->` for post excerpts.
+  - **`slug` is required, not optional.** Without it, Docusaurus only strips the date prefix from the filename — any space or Korean text after the date leaks into the URL unencoded (e.g. a filename like `2026-07-18 나의 개발기.md` produces a URL with a raw leading space). Always set an explicit kebab-case `slug`.
+  - For translated posts (`i18n/en/docusaurus-plugin-content-blog/<same-folder-name>/index.md`), the `slug` in the ko original and the en translation **must be byte-for-byte identical**. The locale dropdown builds its cross-locale link by prefixing the current pathname with `/en`, not by reading the translated file's `slug` — a mismatch builds successfully but makes the dropdown 404 silently.
 - `docs/` — Wiki documentation organized by numbered category prefixes:
   - `01.coding-test/` — Coding test solutions (baekjoon, programmers, codility, code-wars)
   - `02.book/` — Book notes
@@ -36,10 +42,8 @@ Production URL: https://blog.duduling.dev
 
 ### Source Code
 
-- `src/pages/` — Custom pages (homepage at `index.tsx`)
-- `src/components/` — React components (e.g., `HomepageFeatures`)
-- `src/css/custom.css` — Global CSS overrides
-- `docusaurus.config.ts` — Main config (site metadata, navbar, footer, Algolia search, Google Analytics)
+- `src/css/custom.css` — Global CSS overrides (currently the only file under `src/` — no `src/pages/`, `src/components/`, or theme swizzles exist)
+- `docusaurus.config.ts` — Main config (site metadata, navbar, footer, i18n, Algolia search, Google Analytics)
 
 ### Environment
 
