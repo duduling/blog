@@ -171,11 +171,11 @@ const config: Config = {
         },
         { to: '/archive', label: 'Archive', position: 'left' },
         { to: '/tags', label: 'Tags', position: 'left' },
-        {
-          label: 'TIL in Notion',
-          href: 'https://til.duduling.dev',
-          position: 'right',
-        },
+        // {
+        //   label: 'TIL in Notion',
+        //   href: 'https://til.duduling.dev',
+        //   position: 'right',
+        // },
         {
           href: 'https://github.com/duduling',
           label: 'GitHub',
@@ -206,10 +206,10 @@ const config: Config = {
         {
           title: 'Personal Links',
           items: [
-            {
-              label: 'TIL in Notion',
-              href: 'https://til.duduling.dev',
-            },
+            // {
+            //   label: 'TIL in Notion',
+            //   href: 'https://til.duduling.dev',
+            // },
             {
               label: 'GitHub',
               href: 'https://github.com/duduling',
