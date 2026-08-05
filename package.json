@@ -5,8 +5,10 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "dev": "PORT=3030 docusaurus start",
+    "dev:en": "PORT=3031 docusaurus start --locale en",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "preview": "docusaurus build && docusaurus serve --port 3040",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
