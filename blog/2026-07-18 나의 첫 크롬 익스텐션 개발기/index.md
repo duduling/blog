@@ -1,4 +1,5 @@
 ---
+slug: hello-chrome-extension
 title: 'Hello Chrome Extension: 나의 첫 크롬 익스텐션 개발기'
 authors: [duduling]
 tags: [Vibe Coding, Chrome Extension]

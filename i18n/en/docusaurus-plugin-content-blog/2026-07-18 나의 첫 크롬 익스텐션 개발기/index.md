@@ -1,4 +1,5 @@
 ---
+slug: hello-chrome-extension
 title: 'Hello Chrome Extension: My First Chrome Extension'
 authors: [duduling]
 tags: [Vibe Coding, Chrome Extension]
