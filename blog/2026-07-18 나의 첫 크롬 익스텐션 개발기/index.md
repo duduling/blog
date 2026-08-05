@@ -7,7 +7,11 @@ tags: [Vibe Coding, Chrome Extension]
 
 ![Hello Chrome Extension: 나의 첫 크롬 익스텐션 개발기 - cover](./cover.webp)
 
+:::note
+
 **해당 프로젝트는 Claude Code를 이용해 제작한 과정 입니다.🤖**
+
+:::
 
 ## 왜 만들었나
 

@@ -7,7 +7,13 @@ tags: [Vibe Coding, Chrome Extension]
 
 ![Hello Chrome Extension: My First Chrome Extension - cover](./cover.webp)
 
+:::note
+
 **This project was built using Claude Code.🤖**
+
+This article was translated from Korean to English using AI (and reviewed for technical accuracy).
+
+:::
 
 ## Why I Built This
 
