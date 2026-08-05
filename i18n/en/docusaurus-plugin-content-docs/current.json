@@ -1,0 +1,70 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Coding Test": {
+    "message": "Coding Test",
+    "description": "The label for category 'Coding Test' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Baekjoon": {
+    "message": "Baekjoon",
+    "description": "The label for category 'Baekjoon' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Programmers": {
+    "message": "Programmers",
+    "description": "The label for category 'Programmers' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Level 1": {
+    "message": "Level 1",
+    "description": "The label for category 'Level 1' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Level 2": {
+    "message": "Level 2",
+    "description": "The label for category 'Level 2' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Codility": {
+    "message": "Codility",
+    "description": "The label for category 'Codility' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Code Wars": {
+    "message": "Code Wars",
+    "description": "The label for category 'Code Wars' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Book": {
+    "message": "Book",
+    "description": "The label for category 'Book' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.쉽게 배우는 운영체제": {
+    "message": "쉽게 배우는 운영체제",
+    "description": "The label for category '쉽게 배우는 운영체제' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Cheeting Sheet": {
+    "message": "Cheeting Sheet",
+    "description": "The label for category 'Cheeting Sheet' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.CS": {
+    "message": "CS",
+    "description": "The label for category 'CS' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.React & Next.js": {
+    "message": "React & Next.js",
+    "description": "The label for category 'React & Next.js' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.ETC": {
+    "message": "ETC",
+    "description": "The label for category 'ETC' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Online Lecture": {
+    "message": "Online Lecture",
+    "description": "The label for category 'Online Lecture' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.자바스크립트 알고리즘 문제풀이 입문(Inflearn)": {
+    "message": "자바스크립트 알고리즘 문제풀이 입문(Inflearn)",
+    "description": "The label for category '자바스크립트 알고리즘 문제풀이 입문(Inflearn)' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.클린코드 자바스크립트 with Udemy": {
+    "message": "클린코드 자바스크립트 with Udemy",
+    "description": "The label for category '클린코드 자바스크립트 with Udemy' in sidebar 'tutorialSidebar'"
+  }
+}

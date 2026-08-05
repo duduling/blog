@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Let's Duduling",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Duduling Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Wiki": {
+    "message": "Wiki",
+    "description": "Navbar item with label Wiki"
+  },
+  "item.label.Archive": {
+    "message": "Archive",
+    "description": "Navbar item with label Archive"
+  },
+  "item.label.Tags": {
+    "message": "Tags",
+    "description": "Navbar item with label Tags"
+  },
+  "item.label.TIL in Notion": {
+    "message": "TIL in Notion",
+    "description": "Navbar item with label TIL in Notion"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
